@@ -154,6 +154,12 @@ add_action( 'wp_enqueue_scripts', 'portfolio_scripts' );
  */
 require get_template_directory() . '/inc/custom-header.php';
 
+
+/**
+ * Register Custom Post Types.
+ */
+require get_template_directory() . '/inc/custom-post-types.php';
+
 /**
  * Custom template tags for this theme.
  */
