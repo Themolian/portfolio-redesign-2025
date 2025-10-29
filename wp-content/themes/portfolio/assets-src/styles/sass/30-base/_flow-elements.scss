@@ -1,0 +1,118 @@
+/*------------------------------------*\
+    #Flow elements
+\*------------------------------------*/
+@use '../10-settings' as *;
+@use '../20-tools' as *;
+
+/* Remove default italics */
+address,
+dfn {
+    font-style: normal;
+}
+
+
+
+
+
+dfn,
+b,
+strong,
+.bold {
+	font-weight: $emphasis;
+}
+
+
+
+
+
+em,
+i {
+	font-style: italic;
+}
+
+
+
+
+
+small,
+.small,
+.small-caps {
+	@include text-17;
+}
+
+
+.small-caps {
+	text-shadow: 0 0 0 $off-black; // Improve readability
+	text-transform: uppercase;
+}
+
+
+
+
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height
+ */
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    inset-block-end: -0.25em;
+}
+
+sup {
+    inset-block-start: -0.5em;
+}
+
+
+
+
+
+:where(code, kbd, samp) {
+    box-decoration-break: clone;
+    font-family: $mono-family;
+    hyphens: none;
+    padding: 0.125em 0.25em;
+    tab-size: 4;
+    word-break: normal;
+    word-spacing: normal;
+    word-wrap: normal;
+}
+
+/* This is quite a new property, so we want to make sure code styles are not huge or tiny */
+@supports not (font-size-adjust: from-font) {
+    :where(code, kbd, samp) {
+        font-size: 0.8em;
+    }
+}
+
+code {
+    background-color: $neutral-90;
+    border-radius: rem(2);
+    color: $neutral-10;
+}
+
+kbd {
+    border: solid rem(1);
+    border-radius: rem(4);
+}
+
+
+pre:has(code) {
+    background-color: $neutral-90;
+    inline-size: max-content;
+    max-inline-size: 100%;
+    overflow-x: auto; // Code blocks need to scroll
+    padding: 0.5em;
+}
+
+pre code {
+    background: none;
+    border: none;
+    padding: 0;
+}

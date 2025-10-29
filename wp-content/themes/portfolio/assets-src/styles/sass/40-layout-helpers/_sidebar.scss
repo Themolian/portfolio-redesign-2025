@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    #Sidebar layout helper
+
+    From https://absolutely.every-layout.dev/layouts/sidebar/
+
+    `.l-sidebar` creates a container for a larger panel next to
+    a smaller - sidebar - panel.
+
+    When there is enough horizontal space for them to sit alongside
+    each other, they do so. Otherwise they stack vertically. The
+    point at which this happens is determined by setting a flex-basis
+    on the sidebar panel and a min-inline-size on the other panel.
+
+    N.B: because this layout uses Flexbox, we can use the `order`
+    property on either `.not-sidebar` or `.sidebar` (depending upon
+    the source order of the HTML) to determine whether the sidebar
+    sits on the left or right side.
+\*------------------------------------*/
+@use '../20-tools' as *;
+
+.l-sidebar {
+    --_sidebar-main-width: var(--sidebar-main-width, 60%);
+    --_sidebar-side-width: var(--sidebar-side-width, #{rem(250)});
+    --_sidebar-gap: var(--sidebar-gap, #{rem(20)});
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--_sidebar-gap);
+}
+
+
+/**
+Flex-basis determines the ideal width of the `.sidebar`. */
+.l-sidebar .sidebar {
+    flex-basis: var(--_sidebar-side-width);
+    flex-grow: 1;
+}
+
+/**
+Unset the flex-basis to let the contents of `.sidebar` determine the width of
+`.sidebar` (e.g. a button, or an image with a set width).
+ */
+.l-sidebar .sidebar--intrinsic {
+    flex-basis: auto;
+}
+
+
+/**
+The min-inline-size determines the point at which `.sidebar` and `.not-sidebar`
+will sit side-by-side rather than vertically. This negates the use of a viewport
+media query.
+ */
+.l-sidebar .not-sidebar {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: var(--_sidebar-main-width);
+}

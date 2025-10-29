@@ -1,0 +1,141 @@
+/*------------------------------------*\
+    #Amplify guide
+
+    Used purely for the static Amplify site
+\*------------------------------------*/
+@use '../10-settings' as *;
+@use '../20-tools' as *;
+
+.amplify .global-header {
+	background-color: $off-black;
+	color: $off-white;
+	padding-block: rem(10);
+}
+
+.amplify .global-header__link {
+	@include text-25;
+
+	color: $off-white;
+	padding-block: rem(5);
+	text-decoration: none;
+
+	&:hover,
+	&:visited {
+		color: $off-white;
+	}
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+
+.amplify .global-header + .global-nav {
+	border-block-end: solid 2px $neutral-30;
+	padding-block: rem(10);
+}
+
+.amplify .global-nav__link {
+	border-block-end: solid 4px transparent;
+	color: $link-color;
+	display: block;
+	font-size: rem(18);
+	font-weight: bold;
+	padding: rem(8) rem(5);
+	text-decoration: none;
+
+	&:hover,
+	&:visited {
+		color: $link-color;
+	}
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.amplify .current .global-nav__link {
+	border-block-end-color: $off-black;
+	color: $off-black;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+
+.amplify .nav-secondary__link {
+	color: $link-color;
+	display: block;
+	padding-block: rem(9);
+	position: relative;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.amplify .nav-secondary__link[aria-current] {
+	color: $off-black;
+
+	&::before {
+		background-color: $off-black;
+		block-size: 1.5rem;
+		content: '';
+		inline-size: 4px;
+		inset-block-start: 50%;
+		inset-inline-start: rem(-12);
+		position: absolute;
+		transform: translateY(-50%);
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+
+.amplify .content-wrap {
+	@include mq($bp-tab-landscape) {
+		display: grid;
+		grid-template-columns: 25% 10% 65%;
+		-ms-grid-columns: 25% 10% 65%;
+		grid-template-rows: 1fr;
+		-ms-grid-rows: 1fr;
+	}
+}
+
+.amplify .content-wrap > *:first-child {
+	grid-column: 1 / 2;
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.amplify .content-wrap > *:last-child {
+	grid-column: 3 / 4;
+	grid-column: 3;
+	grid-row: 1;
+	margin-block-start: rem(30);
+
+	@include mq($bp-tab-landscape) {
+		margin-block-start: 0;
+	}
+}
+
+
+.amplify .example + .example {
+	margin-block-start: 1rem;
+}
+
+
+.amplify .custom-box .l-box {
+    border: none;
+    outline: solid 2px transparent;
+    outline-offset: -2px;
+}
+
+
+.amplify .search-bar .not-sidebar {
+	min-inline-size: 70%;
+}

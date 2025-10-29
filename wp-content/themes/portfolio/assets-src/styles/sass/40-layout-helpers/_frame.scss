@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    #Frame layout helper
+
+    From https://absolutely.every-layout.dev/layouts/frame/
+
+    `.l-frame` is most useful for cropping media (images
+    and video) to a specific aspect ratio.
+
+    It is not recommended to apply the `.l-frame` class to the
+    <figure> element, as it will interfere with the <figcaption>.
+    Instead, place it on <picture> or a <div> inside of <figure>.
+\*------------------------------------*/
+
+.l-frame {
+    --_frame-x: var(--frame-x, 16);
+    --_frame-y: var(--frame-y, 9);
+
+    align-items: center;
+    aspect-ratio: var(--_frame-x) / var(--_frame-y);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.l-frame :is(iframe, img, video) {
+    block-size: 100%;
+    inline-size: 100%;
+    object-fit: cover;
+}
+
+
+.l-frame[data-shape="circle"] {
+    --frame-x: 1;
+    --frame-y: 1;
+
+    border-radius: 50%;
+}

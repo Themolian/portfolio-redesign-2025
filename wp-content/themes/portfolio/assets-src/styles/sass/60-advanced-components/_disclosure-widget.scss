@@ -1,0 +1,45 @@
+/*------------------------------------*\
+    #Disclosure widget
+\*------------------------------------*/
+@use '../10-settings' as *;
+@use '../20-tools' as *;
+
+[data-toggle="true"] {
+	svg {
+		pointer-events: none;
+	}
+
+    & + * {
+        margin-block-start: 1rem;
+    }
+
+	&[aria-expanded="false"] {
+		.expand-less {
+			display: none;
+		}
+
+		+ * {
+			display: none;
+		}
+	}
+
+	&[aria-expanded="true"] {
+		.expand-more {
+			display: none;
+		}
+
+		+ * {
+			display: block;
+		}
+	}
+}
+
+.no-js {
+    [data-toggle="true"] {
+        display: none;
+    }
+
+    [data-toggle="true"] + * {
+        display: initial;
+    }
+}

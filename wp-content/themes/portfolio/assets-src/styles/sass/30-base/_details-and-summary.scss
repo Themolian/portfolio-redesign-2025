@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    #Details and summary elements
+\*------------------------------------*/
+@use '../10-settings' as *;
+@use '../20-tools' as *;
+
+summary {
+	color: $link-color;
+	cursor: pointer;
+	display: inline-block;
+	padding-inline-start: rem(25);
+	position: relative;
+
+	&::before {
+		block-size: 0;
+		border-color: transparent;
+		border-inline-start-color: inherit;
+		border-style: solid;
+		border-width: 7px 0 7px 12.124px;
+		content: '';
+		display: block;
+		inline-size: 0;
+		inset-block: rem(-1) 0;
+		inset-inline-start: 0;
+		margin: auto;
+		position: absolute;
+	}
+
+	&::-webkit-details-marker {
+		display: none;
+	}
+
+	&:hover {
+		color: $link-color--hover;
+	}
+}
+
+[dir="rtl"] summary::before {
+    border-width: 7px 12.124px 7px 0;
+}
+
+
+details[open] > summary::before {
+	transform: rotate(90deg);
+}
+
+[dir="rtl"] details[open] > summary::before {
+    transform: rotate(-90deg);
+}

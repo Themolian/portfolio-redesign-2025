@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    #Figure
+
+    1. Starting text-wrap style is optional and fine to override/remove as required by a design
+\*------------------------------------*/
+@use '../10-settings' as *;
+@use '../20-tools' as *;
+
+figcaption {
+    max-inline-size: 60ch;
+    padding-block-start: 0.5em;
+    text-wrap: pretty; /* 1 */
+}

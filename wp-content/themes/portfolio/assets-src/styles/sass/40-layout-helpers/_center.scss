@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #Center layout helper
+
+    From https://absolutely.every-layout.dev/layouts/center/
+
+    `.l-center` creates a horizontally centered container.
+
+    1. We use left and right padding to add some minimum space between the
+    contents of `.l-center` and the edges of the parent element or viewport.
+    To avoid making the content narrower than intended, we add an exception
+    to our global box-sizing rule (defined in 30-base/_amplify-reset.scss).
+\*------------------------------------*/
+@use '../10-settings' as *;
+@use '../20-tools' as *;
+
+.l-center {
+    --_center-max-width: var(--center-max-width, #{rem($max-inline-size)});
+    --_center-inline-space: var(--center-inline-space, #{rem(20)});
+
+    box-sizing: content-box /* 1 */;
+    margin-inline: auto;
+    max-inline-size: var(--_center-max-width);
+    padding-inline: var(--_center-inline-space);
+}

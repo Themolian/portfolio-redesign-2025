@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    #Cards advanced
+\*------------------------------------*/
+@use '../10-settings' as *;
+@use '../20-tools' as *;
+
+.js [data-component="card"] {
+	cursor: pointer;
+
+	&:hover .card__link {
+		text-decoration: underline;
+	}
+}

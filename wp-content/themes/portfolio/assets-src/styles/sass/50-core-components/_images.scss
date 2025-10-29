@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    #Image component
+\*------------------------------------*/
+@use '../10-settings' as *;
+@use '../20-tools' as *;
+
+.component--image {
+	@include stack;
+
+	figcaption {
+		@include text-17;
+
+		> a {
+			display: inline-block;
+			margin: 0;
+			padding-block: rem(10);
+		}
+	}
+}

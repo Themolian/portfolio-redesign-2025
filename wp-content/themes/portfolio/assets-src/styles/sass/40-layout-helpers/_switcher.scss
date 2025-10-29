@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    #Switcher layout helper
+
+    From https://every-layout.dev/layouts/switcher/
+
+    `.l-switcher` switches a Flexbox context between a vertical and a
+    horizontal layout at a given, CONTAINER-BASED breakpoint, rather than
+    using viewport media queries. N.B. it does NOT use CSS container queries.
+
+    The child items in the horizontal configuration will be of equal
+	width. If there are many items, this could mean they are too narrow.
+	You will need to consider this when deciding whether and how to use
+	`.l-switcher`. Amplify provides an optional CSS quantity query that will
+	force the items into the vertical display if there is more than three.
+\*------------------------------------*/
+@use '../20-tools' as *;
+
+.l-switcher {
+    --_switcher-gap: var(--switcher-gap, #{rem(20)});
+    --_switcher-threshold: var(--switcher-threshold, #{rem(690)}) ;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--_switcher-gap);
+
+}
+
+.l-switcher > * {
+    flex-basis: calc((var(--_switcher-threshold) - 100%) * 999);
+    flex-grow: 1;
+}
+
+// /**
+// Optional: specify the maximum number of items allowed to be displayed
+// horizontally (three in this example - uncomment and override as required)
+//  */
+// .l-switcher > :nth-last-child(n+4),
+// .l-switcher > :nth-last-child(n+4) ~ * {
+//     flex-basis: 100%;
+// }

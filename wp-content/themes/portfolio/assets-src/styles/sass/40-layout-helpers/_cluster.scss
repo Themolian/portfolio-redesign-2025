@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #Cluster layout helper
+
+    From https://absolutely.every-layout.dev/layouts/cluster/
+
+    `.l-cluster` suits any groups of elements that differ in length and
+    are liable to wrap. Use the Cluster to align any groups of horizontally
+    laid out elements to the left or right, or in the center, with even
+    spacing between elements.
+\*------------------------------------*/
+@use '../20-tools' as *;
+
+/**
+We use flexbox to configure the elements into clusters without creating
+white space. The gap property specifies the spacing. We can control how
+we align items within the cluster by using 'align-items` and `justify-content`.
+ */
+.l-cluster {
+    --_cluster-gap: var(--cluster-gap, #{rem(20)});
+
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--_cluster-gap);
+}

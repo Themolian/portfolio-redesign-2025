@@ -1,0 +1,98 @@
+/*------------------------------------*\
+    #Lists
+
+    1. Starting text-wrap style is optional and fine to override/remove as required by a design
+\*------------------------------------*/
+@use '../10-settings' as *;
+@use '../20-tools' as *;
+
+:where(ol, ul) li {
+    max-inline-size: 60ch;
+    text-wrap: pretty; /* 1 */
+}
+
+:where(ol, ul) :where(li, ol, ul) {
+    margin-block-start: 0.75rem;
+}
+
+:where(ol, ul) :where(ol, ul) {
+    margin-block-end: 1rem;
+}
+
+/* To have markers in nested ordered lists follow this pattern:
+ 1.
+ 1.1.
+ 1.1.1.
+ */
+ol ol ::marker {
+	content: counters(list-item, ".") ". ";
+}
+
+
+/**
+List without bullets, numbers or indentation. Bear in mind that this
+removes list semantics in some WebKit browsers. If it's important that
+the number of items in a list is announced, add role="list" to the list
+ */
+nav :where(ul, ol),
+.clean-list {
+	list-style: none;
+    margin: 0;
+	padding: 0;
+
+	:where(ul, ol, li) {
+        margin: 0;
+        padding: 0;
+	}
+}
+
+
+/**
+Description lists / Definition lists
+ */
+dl {
+	margin-block: 1rem;
+    max-inline-size: 60ch;
+    text-wrap: pretty; /* 1 */
+
+	dt {
+		font-weight: bold;
+	}
+
+	dd + dt {
+		margin-block-start: 0.5rem;
+	}
+
+	dt + dd,
+	dd + dd {
+		margin-block-start: 0.25rem;
+	}
+}
+
+
+// With a grid layout for a more tabulated feel
+dl.grid {
+	@supports (grid-row-start: auto) {
+		display: grid;
+        gap: 1rem;
+		-ms-grid-columns: min-content;
+		-ms-grid-rows: 1fr;
+		grid-template-columns: min-content;
+		grid-template-rows: 1fr;
+
+		dt {
+			grid-column: 1 / 2;
+		}
+
+		dd {
+			grid-column: 2 / 3;
+            margin-inline-start: 0;
+		}
+
+        dd + dt,
+        dt + dd,
+        dd + dd {
+            margin-block-start: 0;
+        }
+	}
+}

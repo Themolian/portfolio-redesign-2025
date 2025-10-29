@@ -1,0 +1,127 @@
+/*------------------------------------*\
+    #Buttons and links
+\*------------------------------------*/
+@use '../10-settings' as *;
+@use '../20-tools' as *;
+
+/**
+Basic link styles
+1: WCAG says don't rely on colour alone for styling links
+ */
+a:not([class]),
+a.with-icon--before,
+a.with-icon--after {
+	border: none;
+	color: $link-color;
+	cursor: pointer;
+	text-decoration: underline; /* 1 */
+
+	&:visited {
+		color: $link-color--visited;
+	}
+
+	&:hover {
+		color: $link-color--hover;
+	}
+
+    &:active {
+        color: $link-color--active;
+    }
+}
+
+
+button {
+    line-height: 1.15;
+}
+
+
+/* Remove text underline from links styled as buttons */
+.button {
+	text-decoration: none;
+}
+
+
+/**
+Buttons
+1: Prevent `.button` going full-width if a child of a flex column.
+2: Meet WCAG AAA target size requirements.
+ */
+button,
+.button,
+input[type="submit"].button {
+	align-items: center;
+	align-self: start; /* 1 */
+	background-color: $accent-color;
+	border: solid 2px $accent-color;
+	border-radius: rem(6);
+	color: $off-white;
+	display: inline-flex;
+	justify-content: center;
+	min-block-size: rem(44); /* 2 */
+	padding-block: 0.25em;
+	padding-inline: 0.75em;
+
+	&:hover {
+		background-color: $accent-color--hover;
+		border-color: $accent-color--hover;
+	}
+
+    &:active {
+        background-color: $accent-color--active;
+        border-color: $accent-color--active;
+        color: $off-white;
+    }
+}
+
+
+/* Full-width buttons */
+.button--wide.button--wide {
+	inline-size: 100%;
+}
+
+
+/* Alternative button style with a distinct border */
+.button--alt.button--alt {
+	background-color: $off-white;
+	color: $accent-color;
+
+	&:hover {
+		background-color: $accent-color--hover;
+		color: $off-white;
+	}
+
+    &:active {
+        background-color: $accent-color--active;
+        border-color: $accent-color--active;
+        color: $off-white;
+    }
+}
+
+
+/**
+ For buttons with no visible background or border
+ 1: Ghost button has no padding but we still want to meet WCAG AAA target size
+ */
+.button--ghost.button--ghost {
+	background-color: transparent;
+	border-color: transparent;
+	color: $black;
+	min-inline-size: rem(44); /* 1 */
+	padding: 0;
+
+	&:hover {
+		background-color: transparent;
+		border-color: transparent;
+	}
+}
+
+
+/* Disabled buttons */
+button[disabled],
+.button[disabled],
+.button.js-disabled {
+    background-color: $neutral-50;
+    border-color: $neutral-50;
+    color: $off-black;
+    cursor: not-allowed;
+}
