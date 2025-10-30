@@ -1,0 +1,3482 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    #Amplify: core styles (all browsers)
+\*------------------------------------*/
+/*------------------------------------*\
+    #Fonts
+\*------------------------------------*/
+/* nunito-regular - latin */
+@font-face {
+  font-display: fallback;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url(../fonts/nunito-v20-latin-regular.woff2) format("woff2"), url(../fonts/nunito-v20-latin-regular.woff) format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-700 - latin */
+@font-face {
+  font-display: fallback;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url(../fonts/nunito-v20-latin-700.woff2) format("woff2"), url(../fonts/nunito-v20-latin-700.woff) format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-italic - latin */
+@font-face {
+  font-display: fallback;
+  font-family: Nunito;
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url(../fonts/nunito-v20-latin-italic.woff2) format("woff2"), url(../fonts/nunito-v20-latin-italic.woff) format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-700italic - latin */
+@font-face {
+  font-display: fallback;
+  font-family: Nunito;
+  font-style: italic;
+  font-weight: 700;
+  src: local(""), url(../fonts/nunito-v20-latin-700italic.woff2) format("woff2"), url(../fonts/nunito-v20-latin-700italic.woff) format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: Afacada;
+  src: local(""), url(../fonts/afacad-bold.woff2) format("woff2"), url(../fonts/afacad-bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Afacada;
+  src: local(""), url(../fonts/afacad-bold-italic.woff2) format("woff2"), url(../fonts/afacad-bold-italic.woff) format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: Afacada;
+  src: local(""), url(../fonts/afacad-medium.woff2) format("woff2"), url(../fonts/afacad-medium.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Afacada;
+  src: local(""), url(../fonts/afacad-medium-italic.woff2) format("woff2"), url(../fonts/afacad-medium-italic.woff) format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: Niramit;
+  src: local(""), url(../fonts/niramit-bold.woff2) format("woff2"), url(../fonts/niramit-bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Niramit;
+  src: local(""), url(../fonts/niramit-bold-italic.woff2) format("woff2"), url(../fonts/niramit-bold-italic.woff) format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+/*------------------------------------*\
+    #Base
+\*------------------------------------*/
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Settings
+\*------------------------------------*/
+/*------------------------------------*\
+    #Breakpoints
+
+    The measurements presented here are for guidance only
+    and should be updated to reflect the design/content needs.
+
+    1. Sets a max-inline-size for improved readability
+\*------------------------------------*/
+/* 1 */
+/*------------------------------------*\
+    #Colors
+
+    Review and edit these default colours, then add further colors
+    as required for your project.
+
+    The ideal color contrast range for meeting WCAG AAA is 7:1 - 15:1
+
+    1. A contrast higher than 15:1 can be triggering, which is why we
+    avoid using pure white with pure black.
+\*------------------------------------*/
+/**
+Brand
+ */
+/**
+Accent
+ */
+/**
+Neutrals
+ */
+/* 1 */
+/* 1 */
+/**
+Links
+ */
+/**
+Focus
+ */
+/**
+Borders
+ */
+/**
+Semantics - used sparingly and purposefully
+ */
+/*------------------------------------*\
+    #Typesetting
+\*------------------------------------*/
+/**
+Use https://www.cssfontstack.com/ and https://meowni.ca/font-style-matcher/ to pick
+system fonts that are reasonably close to any web fonts needed for the project.
+
+This improves performance, avoids Flash Of Invisible Text (FOIT) and minimises
+Flash of Unstyled Text (FOUT) - see https://www.filamentgroup.com/lab/font-events.html
+
+Be sure to include fonts for both Mac OS and Windows. Use quote marks around
+fonts with white space in their name.
+
+When Font Face Observer has detected that the @font-face files are loaded, then we
+can safely use the web fonts instead of the system fonts.
+ */
+/*------------------------------------*\
+    #CSS unit functions
+\*------------------------------------*/
+/**
+ #em
+ */
+/**
+ #rem
+ */
+/**
+ #px
+ */
+/**
+ #Return a number without a unit
+ */
+/**
+ #Remove any unit present to return a unitless number
+ */
+/*------------------------------------*\
+    #Font sizes
+
+    Base uses a Major Second scale
+    Fluid type calculations generated using https://utopia.fyi/type/calculator at 320px and 1120px widths
+\*------------------------------------*/
+/*32px → 50px*/
+/* 32px → 40px */
+/* 28px → 36px */
+/* 25px → 32px */
+/* 26px → 30px */
+/* 22px → 28px */
+/* 18px → 24px */
+/* 20px → 25px */
+/* 18px → 22px */
+/* 16px → 18px */
+/* 14px → 17px */
+/*------------------------------------*\
+    #Media query
+\*------------------------------------*/
+/*------------------------------------*\
+    #Stack
+\*------------------------------------*/
+/**
+This mixin allows us to add vertical spacing between a container's direct children,
+much like the 'axiomatic owl' technique but limited to specific use cases.
+
+By applying Flexbox to the parent container, we can use auto margin on a specific
+child element. This way, we can choose to group elements inside the stack to the
+top/bottom of the vertical space, which is useful for card-like components.
+
+Use with a specific measure, or without for the default measure, e.g.
+
+main {
+	@include stack(4rem);
+}
+
+article {
+	@include stack;
+}
+ */
+/**
+Wildcard selector means these styles apply everywhere.
+1: Use a more intuitive box-sizing model
+2: Control hyphenation when used - see https://clagnut.com/blog/2395/
+3: Avoid text overflow
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* 1 */
+  hyphenate-limit-chars: 6 3 2; /* 2 */
+  overflow-wrap: break-word; /* 3 */
+}
+
+/**
+HTML or :root element.
+1: Prevent layout shift if a classic scrollbar is invoked
+2: Prevent font size inflation with change of orientation
+3: Enable keyword animations
+ */
+html {
+  scrollbar-gutter: stable; /* 1 */
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none; /* 2 */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords; /* 3 */
+  }
+}
+/**
+Set core body defaults.
+1: Improve text rendering
+2: A minimum line-height of 1.5 is needed for accessibility. A generous line-height of 1.7 allows space for borders on the bottom of links, but will need to be set explicitly on many elements.
+3: Supported by Safari - anything using `text-decoration: underline` will inherit this
+4: Not supported by Safari - anything using `text-decoration: underline` will inherit this
+ */
+body {
+  -moz-osx-font-smoothing: grayscale; /* 1 */
+  -webkit-font-smoothing: antialiased; /* 1 */
+  line-height: 1.7; /* 2 */
+  margin: 0;
+  min-block-size: 100vh;
+  -webkit-text-decoration-skip: auto;
+          text-decoration-skip: auto; /* 3 */
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto; /* 4 */
+}
+
+/* Inherit our preferred font settings */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+}
+
+/* Reduce the line-height for specific elements (headings are managed in 30-base/_typography.scss) */
+input,
+label,
+optgroup,
+select,
+textarea {
+  line-height: 1.25;
+}
+
+button {
+  line-height: 1.1;
+}
+
+/* Remove margins in favour of better control by our authored CSS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+dl,
+dd {
+  margin-block: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+/* Improve default styles for horizontal rule */
+hr {
+  block-size: 0;
+  border: 0;
+  -webkit-border-before: 1px solid #c6c6c6;
+          border-block-start: 1px solid #c6c6c6;
+  margin: 2rem 0;
+  overflow: visible;
+}
+
+/**
+ Improve media defaults.
+ 1: Block display is usually what we want
+ 2: Responsive by default
+ 3: Removes strange space-below in case authors overwrite the display value
+ */
+audio,
+canvas,
+embed,
+iframe,
+img,
+object,
+svg,
+video {
+  display: block; /* 1 */
+  max-inline-size: 100%; /* 2 */
+  vertical-align: middle; /* 3 */
+}
+
+/* There's no good reason the audio element defaults to 300px */
+audio {
+  inline-size: 100%;
+}
+
+/* Audio without `[controls]` remains hidden by default */
+audio:not([controls]) {
+  display: none;
+}
+
+/* Remove iframe border */
+iframe {
+  border: 0;
+}
+
+/* Maintain intrinsic aspect ratios when `max-inline-size` is applied */
+canvas,
+img,
+svg,
+video {
+  block-size: auto;
+}
+
+/* Remove the unnecessary wrapping `picture`, while maintaining contents */
+picture {
+  display: contents;
+}
+
+/* Source elements have nothing to display, so hide them entirely */
+source {
+  display: none;
+}
+
+/* Don't allow SVGs in flex contexts to shrink */
+svg {
+  flex-shrink: 0;
+}
+
+video {
+  aspect-ratio: 16/9;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Body
+
+    1. Needed for sticky footer
+    2. Equivalent `overflow-inline` logical property not currently well supported
+\*------------------------------------*/
+/**
+Typographical styles for fonts are in 30-base/_typography.scss
+ */
+body {
+  background-color: #fcfcfc;
+  color: #252525;
+  display: grid; /* 1 */
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr auto; /* 1 */
+  overflow-x: hidden; /* 2 */
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Typography
+
+    1. Makes elements like <code> a more in-proportion size based on our base font
+    2. Starting text-wrap style is optional and fine to override/remove as required by a design
+\*------------------------------------*/
+body {
+  font-size: clamp(1rem, 0.963rem + 0.1852vw, 1.125rem);
+  font-family: "Arial MT Rounded Bold", arial, sans-serif;
+  font-size-adjust: from-font; /* 1 */
+  font-style: normal;
+  font-weight: 400;
+}
+
+p {
+  margin-block: clamp(0.5rem, 0.3rem + 1vw, 1rem);
+  max-inline-size: 60ch;
+  text-wrap: pretty; /* 2 */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Niramit", "Arial MT Rounded Bold", arial, sans-serif;
+  font-weight: 600;
+  -webkit-margin-after: clamp(0.5rem, 0.3rem + 1vw, 1rem);
+          margin-block-end: clamp(0.5rem, 0.3rem + 1vw, 1rem);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance; /* 2 */
+}
+
+h1,
+h2,
+h3 {
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-margin-before: 2rem;
+          margin-block-start: 2rem;
+}
+
+h1,
+.text-40 {
+  font-size: clamp(2rem, 1.8rem + 1vw, 2.5rem);
+  line-height: 1.3;
+  max-inline-size: 20ch;
+}
+
+.hero h1,
+.text-50 {
+  font-size: clamp(2rem, 1.6667rem + 1.6667vw, 3.125rem);
+  line-height: 1.3;
+  max-inline-size: 20ch;
+}
+
+h2,
+.text-30 {
+  font-size: clamp(1.625rem, 1.5509rem + 0.3704vw, 1.875rem);
+  line-height: 1.3;
+  max-inline-size: 35ch;
+}
+
+h3,
+.text-24 {
+  font-size: clamp(1.125rem, 1.0139rem + 0.5556vw, 1.5rem);
+  line-height: 1.3;
+  max-inline-size: 35ch;
+}
+
+h4,
+.text-28 {
+  font-size: clamp(1.375rem, 1.225rem + 0.75vw, 1.75rem);
+  line-height: 1.3;
+}
+
+h5,
+.text-25 {
+  font-size: clamp(1.25rem, 1.125rem + 0.625vw, 1.5625rem);
+  line-height: 1.3;
+}
+
+h6,
+.text-22 {
+  font-size: clamp(1.125rem, 1.025rem + 0.5vw, 1.375rem);
+  line-height: 1.5;
+}
+
+.text-17 {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.0625rem);
+  line-height: 1.5;
+}
+
+.lead {
+  font-size: clamp(1.375rem, 1.225rem + 0.75vw, 1.75rem);
+  line-height: 1.3;
+  -webkit-margin-after: clamp(2.5rem, 2.3rem + 1vw, 3rem);
+          margin-block-end: clamp(2.5rem, 2.3rem + 1vw, 3rem);
+  text-wrap: balance;
+}
+
+/**
+When Font Face Observer has detected that the @font-face files are loaded, then we
+can safely use the web fonts instead of the system fonts.
+ */
+.fonts-loaded body {
+  font-family: "Afacada", "Arial MT Rounded Bold", arial, sans-serif;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Hide and show items inclusively
+
+    References:
+    - https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
+    - https://www.tpgi.com/the-anatomy-of-visually-hidden/
+\*------------------------------------*/
+/*
+ * Hide from everybody and remove from the document flow, using the hidden
+ * attribute.
+ *
+ * Use if a component should remain hidden regardless of CSS being
+ * available or not (the style below provides support for legacy browsers).
+ */
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide from everybody and remove from the document flow, using the %hidden
+ * placeholder (extend the placeholder with Sass to avoid it appearing
+ * repeatedly in your markup).
+ *
+ * Use if a component requires a basic show and hide interaction, and the
+ * content should become available were CSS to fail.
+ */
+/*
+ * Hide from everybody while maintaining layout, using the %invisible
+ * placeholder (extend the placeholder with Sass to avoid it appearing
+ * repeatedly in your markup).
+ *
+ * Use if a more complex transition is required, like when transitioning an
+ * off-screen navigation into the viewport. Best paired with other CSS
+ * properties that negate its position in the DOM e.g. `position: absolute;`
+ */
+/*
+ * Hide visually only - remains available to Assistive Technology -
+ * using the %visually-hidden placeholder (extend the placeholder with
+ * Sass to avoid it appearing repeatedly in your markup).
+ */
+.skip-link.skip-link, .visuallyhidden:not(:focus, :active) {
+  block-size: 1px;
+  border: 0;
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  inline-size: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+}
+
+/*
+ *The :not portions of the following selector allow a means for any
+ * focusable element to become visible when focused/active by a user.
+ */
+br {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+
+/*
+ * Restore an element that has been visually hidden, using the %visually-hidden
+ * placeholder (extend the placeholder with Sass to avoid it appearing
+ * repeatedly in your markup).
+ */
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Flow elements
+\*------------------------------------*/
+/* Remove default italics */
+address,
+dfn {
+  font-style: normal;
+}
+
+dfn,
+b,
+strong,
+.bold {
+  font-weight: 600;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+small,
+.small,
+.small-caps {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.0625rem);
+  line-height: 1.5;
+}
+
+.small-caps {
+  text-shadow: 0 0 0 #252525;
+  text-transform: uppercase;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  inset-block-end: -0.25em;
+}
+
+sup {
+  inset-block-start: -0.5em;
+}
+
+:where(code, kbd, samp) {
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+  font-family: monaco, "Lucida Console", "Courier New", monospace;
+  -webkit-hyphens: none;
+          hyphens: none;
+  padding: 0.125em 0.25em;
+  tab-size: 4;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+}
+
+/* This is quite a new property, so we want to make sure code styles are not huge or tiny */
+@supports not (font-size-adjust: from-font) {
+  :where(code, kbd, samp) {
+    font-size: 0.8em;
+  }
+}
+code {
+  background-color: #262626;
+  border-radius: 0.125rem;
+  color: #f4f4f4;
+}
+
+kbd {
+  border: solid 0.0625rem;
+  border-radius: 0.25rem;
+}
+
+pre:has(code) {
+  background-color: #262626;
+  inline-size: -webkit-max-content;
+  inline-size: max-content;
+  max-inline-size: 100%;
+  overflow-x: auto;
+  padding: 0.5em;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Buttons and links
+\*------------------------------------*/
+/**
+Basic link styles
+1: WCAG says don't rely on colour alone for styling links
+ */
+a:not([class]),
+a.with-icon--before,
+a.with-icon--after {
+  border: none;
+  color: #1371c2;
+  cursor: pointer;
+  text-decoration: underline; /* 1 */
+}
+a:not([class]):visited,
+a.with-icon--before:visited,
+a.with-icon--after:visited {
+  color: #063a69;
+}
+a:not([class]):hover,
+a.with-icon--before:hover,
+a.with-icon--after:hover {
+  color: #0b80e5;
+}
+a:not([class]):active,
+a.with-icon--before:active,
+a.with-icon--after:active {
+  color: #0c5492;
+}
+
+button {
+  line-height: 1.15;
+}
+
+/* Remove text underline from links styled as buttons */
+.button {
+  text-decoration: none;
+}
+
+/**
+Buttons
+1: Prevent `.button` going full-width if a child of a flex column.
+2: Meet WCAG AAA target size requirements.
+ */
+button,
+.button,
+input[type=submit].button {
+  align-items: center;
+  align-self: start; /* 1 */
+  background-color: #da0067;
+  border: solid 2px #da0067;
+  border-radius: 0.375rem;
+  color: #fcfcfc;
+  display: inline-flex;
+  justify-content: center;
+  min-block-size: 2.75rem; /* 2 */
+  padding-block: 0.25em;
+  padding-inline: 0.75em;
+}
+button:hover,
+.button:hover,
+input[type=submit].button:hover {
+  background-color: #bf0059;
+  border-color: #bf0059;
+}
+button:active,
+.button:active,
+input[type=submit].button:active {
+  background-color: #760035;
+  border-color: #760035;
+  color: #fcfcfc;
+}
+
+/* Full-width buttons */
+.button--wide.button--wide {
+  inline-size: 100%;
+}
+
+/* Alternative button style with a distinct border */
+.button--alt.button--alt {
+  background-color: #fcfcfc;
+  color: #da0067;
+}
+.button--alt.button--alt:hover {
+  background-color: #bf0059;
+  color: #fcfcfc;
+}
+.button--alt.button--alt:active {
+  background-color: #760035;
+  border-color: #760035;
+  color: #fcfcfc;
+}
+
+/**
+ For buttons with no visible background or border
+ 1: Ghost button has no padding but we still want to meet WCAG AAA target size
+ */
+.button--ghost.button--ghost {
+  background-color: transparent;
+  border-color: transparent;
+  color: #000;
+  min-inline-size: 2.75rem; /* 1 */
+  padding: 0;
+}
+.button--ghost.button--ghost:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* Disabled buttons */
+button[disabled],
+.button[disabled],
+.button.js-disabled {
+  background-color: #8d8d8d;
+  border-color: #8d8d8d;
+  color: #252525;
+  cursor: not-allowed;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Skip link
+\*------------------------------------*/
+.skip-link.skip-link {
+  background-color: #ffdc00;
+  box-shadow: inset 0 0 0 2px #000;
+  color: #000;
+  padding-block: 0.625em;
+  padding-inline: 0.9375em;
+  position: absolute;
+  text-decoration: none;
+  z-index: 999;
+}
+.skip-link.skip-link:focus {
+  inset-block-start: 2px;
+  inset-inline-start: 2px;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Details and summary elements
+\*------------------------------------*/
+summary {
+  color: #1371c2;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-padding-start: 1.5625rem;
+          padding-inline-start: 1.5625rem;
+  position: relative;
+}
+summary::before {
+  block-size: 0;
+  border-color: transparent;
+  border-inline-start-color: inherit;
+  border-style: solid;
+  border-width: 7px 0 7px 12.124px;
+  content: "";
+  display: block;
+  inline-size: 0;
+  inset-block: -0.0625rem 0;
+  inset-inline-start: 0;
+  margin: auto;
+  position: absolute;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+summary:hover {
+  color: #0b80e5;
+}
+
+[dir=rtl] summary::before {
+  border-width: 7px 12.124px 7px 0;
+}
+
+details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+[dir=rtl] details[open] > summary::before {
+  transform: rotate(-90deg);
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Icons (assumed to be SVGs)
+
+    1. Make SVG inherit the text colour of the parent element, so they remain visible in high contrast themes/dark mode
+    2. Make SVG using currentColor pick up correct Windows High Contrast Mode color
+    See: https://www.smashingmagazine.com/2022/06/guide-windows-high-contrast-mode/
+\*------------------------------------*/
+/**
+Icons are sized relative to font size, thanks to the em unit.
+ */
+.icon {
+  block-size: 0.75em;
+  display: inline;
+  fill: currentcolor; /* 1 */
+  inline-size: 0.75em;
+}
+.icon svg {
+  forced-color-adjust: auto; /* 2 */
+}
+
+.icon--24 {
+  block-size: 1.5rem;
+  inline-size: 1.5rem;
+}
+
+/**
+Use the `with-icon--before` or `with-icon--after` class
+on the icon's parent if there is a need to specify the spacing
+between text and icon. Pay attention to whether the icon comes
+before the text or after.
+
+Use `margin-inline-end` for spacing irrespective of text direction
+ */
+.with-icon--before,
+.with-icon--after {
+  align-items: center;
+  display: inline-flex;
+}
+.with-icon--before .icon,
+.with-icon--after .icon {
+  flex: 0 0 auto;
+}
+
+.with-icon--before .icon {
+  -webkit-margin-end: 0.625rem;
+          margin-inline-end: 0.625rem;
+}
+
+.with-icon--after .icon {
+  -webkit-margin-start: 0.625rem;
+          margin-inline-start: 0.625rem;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Figure
+
+    1. Starting text-wrap style is optional and fine to override/remove as required by a design
+\*------------------------------------*/
+figcaption {
+  max-inline-size: 60ch;
+  -webkit-padding-before: 0.5em;
+          padding-block-start: 0.5em;
+  text-wrap: pretty; /* 1 */
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Lists
+
+    1. Starting text-wrap style is optional and fine to override/remove as required by a design
+\*------------------------------------*/
+:where(ol, ul) li {
+  max-inline-size: 60ch;
+  text-wrap: pretty; /* 1 */
+}
+
+:where(ol, ul) :where(li, ol, ul) {
+  -webkit-margin-before: 0.75rem;
+          margin-block-start: 0.75rem;
+}
+
+:where(ol, ul) :where(ol, ul) {
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
+}
+
+/* To have markers in nested ordered lists follow this pattern:
+ 1.
+ 1.1.
+ 1.1.1.
+ */
+ol ol ::marker {
+  content: counters(list-item, ".") ". ";
+}
+
+/**
+List without bullets, numbers or indentation. Bear in mind that this
+removes list semantics in some WebKit browsers. If it's important that
+the number of items in a list is announced, add role="list" to the list
+ */
+nav :where(ul, ol),
+.clean-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav :where(ul, ol) :where(ul, ol, li),
+.clean-list :where(ul, ol, li) {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+Description lists / Definition lists
+ */
+dl {
+  margin-block: 1rem;
+  max-inline-size: 60ch;
+  text-wrap: pretty; /* 1 */
+}
+dl dt {
+  font-weight: 700;
+}
+dl dd + dt {
+  -webkit-margin-before: 0.5rem;
+          margin-block-start: 0.5rem;
+}
+dl dt + dd,
+dl dd + dd {
+  -webkit-margin-before: 0.25rem;
+          margin-block-start: 0.25rem;
+}
+
+@supports (grid-row-start: auto) {
+  dl.grid {
+    display: grid;
+    gap: 1rem;
+    -ms-grid-columns: min-content;
+    -ms-grid-rows: 1fr;
+    grid-template-columns: -webkit-min-content;
+    grid-template-columns: min-content;
+    grid-template-rows: 1fr;
+  }
+  dl.grid dt {
+    grid-column: 1/2;
+  }
+  dl.grid dd {
+    grid-column: 2/3;
+    -webkit-margin-start: 0;
+            margin-inline-start: 0;
+  }
+  dl.grid dd + dt,
+  dl.grid dt + dd,
+  dl.grid dd + dd {
+    -webkit-margin-before: 0;
+            margin-block-start: 0;
+  }
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Quotes
+
+    1. Starting text-wrap style is optional and fine to override/remove as required by a design
+\*------------------------------------*/
+blockquote {
+  font-size: clamp(1.25rem, 1.125rem + 0.625vw, 1.5625rem);
+  line-height: 1.3;
+  margin-block: 2rem;
+  max-inline-size: 60ch;
+  padding: 0.625rem;
+  position: relative;
+  text-wrap: pretty; /* 1 */
+}
+blockquote::before {
+  background-color: #8d8d8d;
+  block-size: 100%;
+  content: "";
+  inline-size: 0.1875rem;
+  inset-block-start: 0;
+  inset-inline-start: -0.1875rem;
+  position: absolute;
+}
+blockquote > *:first-child {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+blockquote *:only-child {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+blockquote footer {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.0625rem);
+  line-height: 1.5;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Tables
+\*------------------------------------*/
+table {
+  border: 1px solid #c6c6c6;
+  border-collapse: collapse;
+  inline-size: 100%;
+}
+
+caption {
+  border: 1px solid #c6c6c6;
+  -webkit-border-after: 0;
+          border-block-end: 0;
+}
+caption :where(h1, h2, h3, h4, h5, h6) {
+  margin-block: 0;
+}
+
+caption,
+th,
+td {
+  padding: 0.75rem;
+  text-align: start;
+}
+
+th,
+td {
+  border: 1px solid #c6c6c6;
+  vertical-align: text-top;
+}
+
+th {
+  font-weight: 600;
+}
+
+/**
+Responsive tables:
+- https://adrianroselli.com/2020/11/under-engineered-responsive-tables.html
+- https://daverupert.com/2023/08/animation-timeline-scroll-shadows/
+
+ */
+@media screen {
+  [data-component=table-wrap] {
+    border: 1px solid #c6c6c6;
+    margin-block: 1rem;
+    max-inline-size: 100% !important;
+  }
+  [data-component=table-wrap][role][tabindex] {
+    animation: scroll-shadow-inset linear; /* 1 */
+    animation-timeline: scroll(self inline); /* 1 */
+    overflow: auto;
+  }
+  [data-component=table-wrap] table {
+    border: 0;
+    margin-block: 0;
+  }
+  [data-component=table-wrap] caption {
+    -webkit-border-after: 1px solid #c6c6c6;
+            border-block-end: 1px solid #c6c6c6;
+    -webkit-border-before: 0;
+            border-block-start: 0;
+    border-inline: 0;
+  }
+  [data-component=table-wrap] th,
+  [data-component=table-wrap] thead td,
+  [data-component=table-wrap] th[scope=row] ~ td {
+    -webkit-border-before: 0;
+            border-block-start: 0;
+  }
+  [data-component=table-wrap] tr :where(th:first-child, td:first-child) {
+    -webkit-border-start: 0;
+            border-inline-start: 0;
+  }
+  [data-component=table-wrap] tr :where(th:last-child, td:last-child) {
+    -webkit-border-end: 0;
+            border-inline-end: 0;
+  }
+  [data-component=table-wrap] tr:last-of-type th[scope=row],
+  [data-component=table-wrap] tbody tr:last-of-type td {
+    -webkit-border-after: 0;
+            border-block-end: 0;
+  }
+}
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Animation
+
+    'scroll-shadow-inset' improves visual affordance of horizontally scrolling tables
+\*------------------------------------*/
+/**
+Respect the choices of users who do not want animations. The styles here:
+- Immediately jump any animation to its end point
+- Remove transitions and fixed background attachments
+See https://github.com/mozdevs/cssremedy/issues/11
+ */
+@media screen and (prefers-reduced-motion: reduce), (update: slow) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+@keyframes scroll-shadow-inset {
+  /* start with inset shadow on right */
+  from {
+    box-shadow: inset -10px -10px 15px 0 rgba(0, 0, 0, 0.3);
+  }
+  /* end with inset shadow on left */
+  to {
+    box-shadow: inset 10px -10px 15px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Global focus styles incorporating a reset for :focus-visible
+
+    1. If a link breaks over multiple lines, copy focus styles over all lines.
+    See https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break
+    2. Windows High Contrast/forced-color modes tend to eliminate background-color and box-shadow.
+    We retain an outline - even if it's transparent - to ensure an accessible focus indicator.
+\*------------------------------------*/
+:focus {
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone; /* 1 */
+  box-shadow: 0 0 0 4px #000;
+  outline: 2px solid #ffdc00; /* 2 */
+  outline-offset: 0; /* 2 */
+  text-decoration: none;
+}
+
+/**
+Unset focus styles (apart from transparent outline) where the browser wouldn't set a visible focus
+ */
+:focus:not(:focus-visible) {
+  box-shadow: none;
+  outline-color: transparent;
+}
+
+/**
+Where focus is programmatically moved to a target element that is not interactive, we
+suppress the focus styles. See https://github.com/twbs/bootstrap/issues/29875#issuecomment-582648069
+ */
+main:focus,
+#main:focus,
+[tabindex="-1"]:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/*------------------------------------*\
+    #Forms
+\*------------------------------------*/
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Forms
+
+    Make sure to apply the `.amplify-form` class directly to the <form> to
+    pick up these styles and try to avoid conflicts with third party form styles
+\*------------------------------------*/
+.amplify-form {
+  /**
+  The default styles for fieldset and legend are weird, so we effectively hide the fieldset
+  If you want a border etc. wrap the fieldset in a div with the class `.fieldset-wrap`
+  */
+}
+.amplify-form fieldset {
+  border: 0;
+  margin: 0;
+  min-inline-size: 0;
+  padding: 0;
+}
+.amplify-form .fieldset-wrap {
+  border: solid 1px;
+  padding: 0.5rem;
+}
+.amplify-form {
+  /* Set vertical spacing between direct children of a form or fieldset */
+}
+.amplify-form > * + *,
+.amplify-form fieldset > * + * {
+  -webkit-margin-before: 1.75rem;
+          margin-block-start: 1.75rem;
+}
+.amplify-form {
+  /* Double the vertical spacing around fieldset/.fieldset-wrap */
+}
+.amplify-form fieldset:not(:first-child),
+.amplify-form fieldset + *,
+.amplify-form .fieldset-wrap:not(:first-child),
+.amplify-form .fieldset-wrap + * {
+  -webkit-margin-before: 3rem;
+          margin-block-start: 3rem;
+}
+.amplify-form legend {
+  font-size: clamp(1.125rem, 1.025rem + 0.5vw, 1.375rem);
+  line-height: 1.5;
+  font-weight: 600;
+}
+.amplify-form {
+  /* A wrapper for an input and its label (but not checkboxes/radios, which have their own classes) */
+}
+.amplify-form .field {
+  max-inline-size: 41.25rem;
+}
+.amplify-form label,
+.amplify-form .field-label,
+.amplify-form .field-hint,
+.amplify-form .field-error-msg,
+.amplify-form .faux-label {
+  display: block;
+}
+.amplify-form label,
+.amplify-form .field-label,
+.amplify-form .faux-label {
+  -webkit-margin-after: 0.25rem;
+          margin-block-end: 0.25rem;
+}
+.amplify-form label,
+.amplify-form .field-label,
+.amplify-form .group-legend {
+  font-weight: 600;
+}
+.amplify-form .field-hint {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.0625rem);
+  line-height: 1.5;
+  color: #525252;
+  margin-block: 0.25rem;
+  max-inline-size: 41.25rem;
+}
+.amplify-form .field-label + .field-hint,
+.amplify-form .group-legend + .field-hint {
+  -webkit-margin-before: 0.25rem;
+          margin-block-start: 0.25rem;
+}
+.amplify-form :where(input:not([type=color], [type=file], [type=checkbox], [type=radio]), textarea) {
+  -webkit-appearance: none;
+          appearance: none;
+  background-color: inherit;
+  border: 2px solid #8d8d8d;
+  border-radius: 0;
+  inline-size: 100%;
+  padding: 0.3125rem;
+}
+.amplify-form {
+  /* Make input height match Amplify button height (defaults to equivalent of 44px for WCAG AAA */
+}
+.amplify-form :where(input:not([type=checkbox], [type=radio])) {
+  min-block-size: 2.75rem;
+}
+.amplify-form {
+  /* Limit max width of file input to prevent unwanted horizontal scrolling */
+}
+.amplify-form [type=file] {
+  border-color: transparent;
+  max-inline-size: 100%;
+}
+.amplify-form textarea {
+  resize: vertical;
+}
+.amplify-form textarea:not([rows]) {
+  min-height: 10em;
+}
+.amplify-form {
+  /* Disabled inputs - try to avoid using these to avoid accessibility issues */
+}
+.amplify-form input[disabled] {
+  background-color: #e0e0e0;
+}
+.amplify-form input[disabled],
+.amplify-form label input[disabled] + * {
+  cursor: not-allowed;
+}
+.amplify-form {
+  /* A wrapper to allow fields to sit side-by-side horizontally, if desired */
+}
+.amplify-form .input-group {
+  align-items: center;
+  display: flex;
+  gap: 1.875rem;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+.amplify-form {
+  /* Fixed input widths */
+}
+.amplify-form .input-width-30 {
+  max-inline-size: 59ex;
+}
+.amplify-form .input-width-20 {
+  max-inline-size: 41ex;
+}
+.amplify-form .input-width-10 {
+  max-inline-size: 23ex;
+}
+.amplify-form .input-width-5 {
+  max-inline-size: 10.8ex;
+}
+.amplify-form .input-width-4 {
+  max-inline-size: 9ex;
+}
+.amplify-form .input-width-3 {
+  max-inline-size: 7.2ex;
+}
+.amplify-form .input-width-2 {
+  max-inline-size: 5.4ex;
+}
+.amplify-form {
+  /* Error styles */
+}
+.amplify-form [data-component=error-summary] li a {
+  color: #a4141b;
+  display: inline-block;
+  font-weight: 700;
+  padding-block: 0.625rem;
+}
+.amplify-form [data-component=error-summary] li a:hover, .amplify-form [data-component=error-summary] li a:visited {
+  color: #a4141b;
+}
+.amplify-form .field--error {
+  -webkit-border-start: solid 0.3125rem #a4141b;
+          border-inline-start: solid 0.3125rem #a4141b;
+  -webkit-padding-start: 0.9375rem;
+          padding-inline-start: 0.9375rem;
+}
+.amplify-form .field--error input:not([type=file]),
+.amplify-form .field--error textarea:not(:focus) {
+  border-color: #a4141b;
+}
+.amplify-form .field--error input:focus,
+.amplify-form .field--error textarea:focus {
+  border-color: #8d8d8d;
+}
+.amplify-form .field-error-msg {
+  color: #a4141b;
+  font-weight: 600;
+  margin-block: 0.9375rem 0;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Search
+
+    Make sure to apply the `.amplify-form` class directly to the <form> to
+    pick up these styles and try to avoid conflicts with third party form styles
+\*------------------------------------*/
+.amplify-form [type=search] {
+  max-inline-size: none;
+  position: relative;
+  z-index: 1;
+}
+.amplify-form {
+  /* Hide these to make search input more uniform across browsers */
+}
+.amplify-form [type=search]::-webkit-search-cancel-button,
+.amplify-form [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+          appearance: none;
+}
+.amplify-form {
+  /* Optional: add a decorative icon at the start of the search input */
+}
+@supports ((-webkit-padding-start: 1em) or (padding-inline-start: 1em)) {
+  .amplify-form input[type=search] {
+    background-position: center left 0.5em;
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    -webkit-padding-start: 2.5rem;
+            padding-inline-start: 2.5rem;
+  }
+  .amplify-form [dir=rtl] input[type=search] {
+    background-position: center right 0.5em;
+  }
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Forms - checkbox and radio inputs
+
+    Make sure to apply the `.amplify-form` class directly to the <form> to
+    pick up these styles and try to avoid conflicts with third party form styles
+
+    Wrap each checkbox/radio input and its label (plus any hint/error text) inside a <div>.
+
+    1. Windows High Contrast/forced-color modes tend to eliminate background-color and box-shadow.
+    We retain an outline - even if it's transparent - to ensure an accessible focus indicator.
+\*------------------------------------*/
+/* stylelint-disable no-descending-specificity */
+.amplify-form {
+  /* Select any <div> which contains a checkbox or radio input */
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  /* Reduce vertical space between adjacent checkbox/radio fields */
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) + div:has(> :where([type=checkbox], [type=radio])) {
+  -webkit-margin-before: 0.5rem;
+          margin-block-start: 0.5rem;
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) {
+  /* Use pointer cursor to increase visual affordance */
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) input:not([disabled]),
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) input:not([disabled]) + label {
+  cursor: pointer;
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) input {
+  block-size: 44px;
+  inline-size: 44px;
+  margin: 0;
+  -webkit-margin-start: -10px;
+          margin-inline-start: -10px;
+  opacity: 0;
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) {
+  /* Disabled inputs - try to avoid using these to avoid accessibility issues */
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) input[disabled] + label {
+  cursor: not-allowed;
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) input[disabled] + label::before {
+  background-color: #e0e0e0;
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) label {
+  align-self: center;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  max-inline-size: calc(100% - 74px);
+  padding-block: 7px;
+  padding-inline: 15px;
+  -webkit-padding-start: 1px;
+          padding-inline-start: 1px;
+  touch-action: manipulation;
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) label::before, .amplify-form div:has(> :where([type=checkbox], [type=radio])) label::after {
+  content: "";
+  position: absolute;
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) label {
+  /* Shared styles for the checkbox square/radio circle */
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) label::before {
+  block-size: 24px;
+  border: 2px solid #8d8d8d;
+  inline-size: 24px;
+  inset-block-start: 10px;
+  inset-inline-start: 0;
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) [type=checkbox] + label::before,
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) [type=checkbox] + label::after {
+  background: transparent;
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) {
+  /* The checkbox "tick" */
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) [type=checkbox] + label::after {
+  block-size: 6.5px;
+  border: solid;
+  border-block-start-color: transparent;
+  border-width: 0 0 3px 3px;
+  inline-size: 12px;
+  inset-block-start: 17px;
+  inset-inline-start: 6px;
+  transform: rotate(-45deg);
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) [type=radio] + label::before,
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) [type=radio] + label::after {
+  border-radius: 50%;
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) {
+  /* The radio "dot" */
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) [type=radio] + label::after {
+  background-color: currentcolor;
+  block-size: 0;
+  border: 5px solid;
+  inline-size: 0;
+  inset-block-start: 17px;
+  inset-inline-start: 7px;
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) {
+  /* Checkbox/radio input when not checked */
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) [type=checkbox] + label::after,
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) [type=radio] + label::after {
+  opacity: 0;
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) {
+  /* Checkbox/radio input when checked */
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) [type=checkbox]:checked + label::after,
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) [type=radio]:checked + label::after {
+  opacity: 1;
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) {
+  /* The hint text, if used */
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) .field-hint {
+  inline-size: 100%;
+  margin-block: 0;
+  max-inline-size: none;
+  padding-inline: 36px 15px;
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) {
+  /* Checkbox/radio input with focus */
+}
+.amplify-form div:has(> :where([type=checkbox], [type=radio])) input:focus + label::before {
+  box-shadow: 0 0 0 4px #000;
+  outline: 2px solid #ffdc00; /* 1 */
+  outline-offset: 0; /* 1 */
+}
+.amplify-form {
+  /* Checkbox/radio input with hover - add `.checkbox-item`/`.radio-item` class to parent <div> */
+}
+.amplify-form :where(.checkbox-item, .radio-item):hover input:not([disabled]) + label::before {
+  box-shadow: 0 0 0 4px #8d8d8d;
+}
+.amplify-form {
+  /* Checkbox/radio input with focus and hover - add `.checkbox-item`/`.radio-item` class to parent <div> */
+}
+.amplify-form :where(.radio-item, .checkbox-item):hover input:focus + label::before {
+  box-shadow: 0 0 0 4px #000;
+  outline: 2px solid #8d8d8d; /* 1 */
+  outline-offset: 0; /* 1 */
+}
+
+/* stylelint-enable no-descending-specificity */
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Select
+
+    Make sure to apply the `.amplify-form` class directly to the <form> to
+    pick up these styles and try to avoid conflicts with third party form styles
+\*------------------------------------*/
+.amplify-form select {
+  background-color: inherit;
+  border: 2px solid #8d8d8d;
+  border-radius: 0;
+  inline-size: 100%;
+  padding: 0.3125rem;
+}
+.amplify-form {
+  /* Make <select> height match Amplify button height (defaults to equivalent of 44px for WCAG AAA) */
+}
+.amplify-form select:not([multiple]) {
+  min-block-size: 2.75rem;
+}
+.amplify-form {
+  /* Optional: select with custom icon matching the SVG used for accessible autocomplete */
+}
+@supports ((-webkit-appearance: none) or (appearance: none)) {
+  .amplify-form select:not([multiple]) {
+    -webkit-appearance: none;
+            appearance: none;
+    background-position: center right 0.3125rem;
+    background-repeat: no-repeat;
+    -webkit-padding-end: 2.125rem;
+            padding-inline-end: 2.125rem;
+  }
+  .amplify-form [dir=rtl] select:not([multiple]) {
+    background-position: center left 0.3125rem;
+  }
+}
+
+/*------------------------------------*\
+    #Memorable dates (e.g. date of birth)
+
+    Make sure to apply the `.amplify-form` class directly to the <form> to
+    pick up these styles and try to avoid conflicts with third party form styles
+\*------------------------------------*/
+.amplify-form .memorable-date {
+  display: inline-block;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+.amplify-form .memorable-date + .memorable-date {
+  -webkit-margin-start: 1rem;
+          margin-inline-start: 1rem;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Forms - segmented options
+
+    Can be built using either radio or checkbox inputs.
+
+    Make sure to apply the `.amplify-form` class directly to the <form> to
+    pick up these styles and try to avoid conflicts with third party form styles
+\*------------------------------------*/
+.amplify-form .segmented-group-wrapper {
+  max-inline-size: none;
+}
+.amplify-form .segmented-group.l-switcher {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+.amplify-form .segmented-group.l-switcher > * {
+  display: block;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  position: relative;
+}
+.amplify-form .segmented-group.l-switcher label {
+  border: 2px solid #8d8d8d;
+  display: block;
+  margin: 0.125rem;
+  max-inline-size: none;
+  padding: 0;
+}
+.amplify-form .segmented-group.l-switcher label::before, .amplify-form .segmented-group.l-switcher label::after {
+  content: "";
+  position: absolute;
+}
+.amplify-form .segmented-group.l-switcher label::before {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  inset-block-start: 0.625rem;
+  inset-inline: auto 0.625rem;
+}
+.amplify-form .segmented-group.l-switcher label {
+  /* The "tick" - even if it's a radio */
+}
+.amplify-form .segmented-group.l-switcher label::after {
+  background: transparent;
+  block-size: 6.5px;
+  border: solid;
+  border-block-start-color: transparent;
+  border-radius: 0;
+  border-width: 0 0 3px 3px;
+  inline-size: 12px;
+  inset-block-start: 1.0625rem;
+  inset-inline: auto 1rem;
+  transform: rotate(-45deg);
+}
+.amplify-form .segmented-group.l-switcher input {
+  block-size: 2.75rem;
+  cursor: pointer;
+  inline-size: 2.75rem;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+}
+.amplify-form .segmented-group.l-switcher .segmented-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.amplify-form .segmented-group.l-switcher .segmented-label > * + * {
+  -webkit-margin-before: 0.5em;
+          margin-block-start: 0.5em;
+}
+.amplify-form .segmented-group.l-switcher .segmented-label {
+  display: block;
+  padding: 0.625rem;
+  -webkit-padding-end: 2.75rem;
+          padding-inline-end: 2.75rem;
+}
+.amplify-form .segmented-group.l-switcher .segmented-label span {
+  display: block;
+}
+.amplify-form .segmented-group.l-switcher .segmented-label span:first-of-type {
+  font-weight: 700;
+}
+.amplify-form .segmented-group.l-switcher .segmented-label__copy {
+  font-weight: 400;
+}
+.amplify-form .segmented-group.l-switcher {
+  /* Input with hover */
+}
+.amplify-form .segmented-group.l-switcher > * > *:hover label {
+  background-color: #c6c6c6;
+}
+.amplify-form .segmented-group.l-switcher {
+  /* Input with focus - label carries focus styles */
+}
+.amplify-form .segmented-group.l-switcher input:focus + label {
+  border-color: #000;
+  box-shadow: inset 0 0 0 4px #8d8d8d;
+  outline: 2px solid #ffdc00; /* 1 */
+  outline-offset: -4px; /* 1 */
+}
+.amplify-form .segmented-group.l-switcher input:focus + label::before {
+  box-shadow: none;
+  outline: none;
+}
+
+/*------------------------------------*\
+    #Layout helpers
+\*------------------------------------*/
+/*------------------------------------*\
+    #Box layout helper
+
+    From https://absolutely.every-layout.dev/layouts/box/
+
+    `.l-box` should have borders and/or padding on all sides, or
+    none at all. Otherwise it's not a box, but something more specific.
+
+    Forced colors mode (previously Windows High Contrast Mode)
+    tends to eliminate background-color. If no border is set on the box,
+    people using this mode won't see that there is a box. There are
+    two options for managing this: either keep the border and make it the
+    same colour as the box background, or remove the border and add a
+    transparent outline with a negative outline-offset matching the
+    outline width so that it behaves like a border and doesn't add to
+    the overall size of the box.
+\*------------------------------------*/
+.l-box {
+  --_box-bg-clr: var(--box-bg-clr, transparent);
+  --_box-border-clr: var(--box-border-clr, currentcolor);
+  --_box-border-style: var(--box-border-style, solid);
+  --_box-border-width: var(--box-border-width, 2px);
+  --_box-radius: var(--box-radius, 0);
+  --_box-padding: var(--box-padding, 1.25rem);
+  background-color: var(--_box-bg-clr);
+  border: var(--_box-border-width) var(--_box-border-style) var(--_box-border-clr);
+  border-radius: var(--_box-radius);
+  display: block;
+  padding: var(--_box-padding);
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Center layout helper
+
+    From https://absolutely.every-layout.dev/layouts/center/
+
+    `.l-center` creates a horizontally centered container.
+
+    1. We use left and right padding to add some minimum space between the
+    contents of `.l-center` and the edges of the parent element or viewport.
+    To avoid making the content narrower than intended, we add an exception
+    to our global box-sizing rule (defined in 30-base/_amplify-reset.scss).
+\*------------------------------------*/
+.l-center {
+  --_center-max-width: var(--center-max-width, 87.5rem);
+  --_center-inline-space: var(--center-inline-space, 1.25rem);
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--_center-max-width);
+  padding-inline: var(--_center-inline-space);
+}
+
+/*------------------------------------*\
+    #Cover layout helper
+
+    From https://absolutely.every-layout.dev/layouts/cover/
+
+    `.l-cover` uses Flexbox to vertically center a principal item
+    of content. It is given a min-block-size value to achieve this,
+    which could be set to anything you like.
+
+    `.l-cover` will also accommodate an optional header and/or footer
+    (it is not required to use the `<header>` or `<footer>` elements,
+    we are simply referring to the general placement of items).
+
+    Horizontal centering of content can be achieved using the `.l-center`
+    layout within `.l-cover`, or with the `.u-center` utility found in
+    /90-utilities/layout
+\*------------------------------------*/
+.l-cover {
+  --_cover-min-height: var(--cover-min-height, 30vh);
+  --_cover-padding: var(--cover-padding, 1.25rem);
+  --_cover-min-space: var(--cover-min-space, 1.25rem);
+  display: flex;
+  flex-direction: column;
+  min-block-size: var(--_cover-min-height);
+  padding: var(--_cover-padding);
+}
+
+/**
+Minimum spacing between the (up to) three child elements of `.l-cover`
+ */
+.l-cover > * {
+  margin-block: var(--_cover-min-space);
+}
+
+.l-cover > .principal {
+  margin-block: auto;
+}
+
+/**
+These styles space out an optional header/footer area without
+disturbing the vertically centered element.
+ */
+.l-cover > :first-child:not(.principal) {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+
+.l-cover > :last-child:not(.principal) {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+/*------------------------------------*\
+    #Cluster layout helper
+
+    From https://absolutely.every-layout.dev/layouts/cluster/
+
+    `.l-cluster` suits any groups of elements that differ in length and
+    are liable to wrap. Use the Cluster to align any groups of horizontally
+    laid out elements to the left or right, or in the center, with even
+    spacing between elements.
+\*------------------------------------*/
+/**
+We use flexbox to configure the elements into clusters without creating
+white space. The gap property specifies the spacing. We can control how
+we align items within the cluster by using 'align-items` and `justify-content`.
+ */
+.l-cluster {
+  --_cluster-gap: var(--cluster-gap, 1.25rem);
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--_cluster-gap);
+}
+
+/*------------------------------------*\
+    #Frame layout helper
+
+    From https://absolutely.every-layout.dev/layouts/frame/
+
+    `.l-frame` is most useful for cropping media (images
+    and video) to a specific aspect ratio.
+
+    It is not recommended to apply the `.l-frame` class to the
+    <figure> element, as it will interfere with the <figcaption>.
+    Instead, place it on <picture> or a <div> inside of <figure>.
+\*------------------------------------*/
+.l-frame {
+  --_frame-x: var(--frame-x, 16);
+  --_frame-y: var(--frame-y, 9);
+  align-items: center;
+  aspect-ratio: var(--_frame-x)/var(--_frame-y);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.l-frame :is(iframe, img, video) {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+.l-frame[data-shape=circle] {
+  --frame-x: 1;
+  --frame-y: 1;
+  border-radius: 50%;
+}
+
+/*------------------------------------*\
+    #Sidebar layout helper
+
+    From https://absolutely.every-layout.dev/layouts/sidebar/
+
+    `.l-sidebar` creates a container for a larger panel next to
+    a smaller - sidebar - panel.
+
+    When there is enough horizontal space for them to sit alongside
+    each other, they do so. Otherwise they stack vertically. The
+    point at which this happens is determined by setting a flex-basis
+    on the sidebar panel and a min-inline-size on the other panel.
+
+    N.B: because this layout uses Flexbox, we can use the `order`
+    property on either `.not-sidebar` or `.sidebar` (depending upon
+    the source order of the HTML) to determine whether the sidebar
+    sits on the left or right side.
+\*------------------------------------*/
+.l-sidebar {
+  --_sidebar-main-width: var(--sidebar-main-width, 60%);
+  --_sidebar-side-width: var(--sidebar-side-width, 15.625rem);
+  --_sidebar-gap: var(--sidebar-gap, 1.25rem);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--_sidebar-gap);
+}
+
+/**
+Flex-basis determines the ideal width of the `.sidebar`. */
+.l-sidebar .sidebar {
+  flex-basis: var(--_sidebar-side-width);
+  flex-grow: 1;
+}
+
+/**
+Unset the flex-basis to let the contents of `.sidebar` determine the width of
+`.sidebar` (e.g. a button, or an image with a set width).
+ */
+.l-sidebar .sidebar--intrinsic {
+  flex-basis: auto;
+}
+
+/**
+The min-inline-size determines the point at which `.sidebar` and `.not-sidebar`
+will sit side-by-side rather than vertically. This negates the use of a viewport
+media query.
+ */
+.l-sidebar .not-sidebar {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: var(--_sidebar-main-width);
+}
+
+/*------------------------------------*\
+    #Switcher layout helper
+
+    From https://every-layout.dev/layouts/switcher/
+
+    `.l-switcher` switches a Flexbox context between a vertical and a
+    horizontal layout at a given, CONTAINER-BASED breakpoint, rather than
+    using viewport media queries. N.B. it does NOT use CSS container queries.
+
+    The child items in the horizontal configuration will be of equal
+	width. If there are many items, this could mean they are too narrow.
+	You will need to consider this when deciding whether and how to use
+	`.l-switcher`. Amplify provides an optional CSS quantity query that will
+	force the items into the vertical display if there is more than three.
+\*------------------------------------*/
+.l-switcher {
+  --_switcher-gap: var(--switcher-gap, 1.25rem);
+  --_switcher-threshold: var(--switcher-threshold, 43.125rem) ;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--_switcher-gap);
+}
+
+.l-switcher > * {
+  flex-basis: calc((var(--_switcher-threshold) - 100%) * 999);
+  flex-grow: 1;
+}
+
+/*------------------------------------*\
+    #Auto grid layout helper
+
+    From https://every-layout.dev/layouts/grid/
+
+    Creates a responsive grid of content, using CSS Grid.
+
+    If grid items should be able to grow if there's leftover space available on a row,
+    change `--grid-placement` to use `auto-fit` rather than `auto-fill`. Here's a useful
+    reference about `auto-fill` versus `auto-fit` behaviour:
+    https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/
+\*------------------------------------*/
+.l-autogrid {
+  --_grid-placement: var(--grid-placement, auto-fill);
+  --_grid-min-item-size: var(--grid-min-item-size, min(100%, 15.625rem));
+  --_grid-gap: var(--grid-gap, 1.25rem);
+  display: grid;
+  gap: var(--_grid-gap);
+  grid-template-columns: repeat(var(--_grid-placement), minmax(var(--_grid-min-item-size), 1fr));
+}
+
+/*------------------------------------*\
+    #Core components
+\*------------------------------------*/
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Global header
+\*------------------------------------*/
+.site-head {
+  background-color: #130d2a;
+  color: #fff;
+}
+
+.site-header {
+  padding-inline: 1.25rem;
+}
+
+.header-inner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-inline: auto;
+  max-inline-size: 87.5rem;
+  padding-top: 1.875rem;
+  width: 100%;
+}
+@media screen and (min-width: 37.5em) {
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-block: 1.875rem;
+  }
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Logo
+\*------------------------------------*/
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Navigation core
+\*------------------------------------*/
+nav ul,
+nav ul * + * {
+  margin: 0;
+}
+
+[data-nav=submenu] {
+  -webkit-padding-start: 1.25rem;
+          padding-inline-start: 1.25rem;
+}
+
+.global-nav {
+  margin-block: 1.25rem;
+}
+
+.global-nav a {
+  color: #fff;
+  display: block;
+  font-family: "Niramit", "Arial MT Rounded Bold", arial, sans-serif;
+  line-height: normal;
+  padding: 0 0.875rem;
+  text-decoration: none;
+}
+.global-nav a:hover {
+  color: #0b80e5;
+  outline-width: 0; /* 2 */
+}
+.global-nav a:active {
+  color: #252525;
+  outline-width: 0; /* 2 */
+}
+.global-nav a:visited {
+  color: #fff;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Breadcrumbs
+    See: https://scottaohara.github.io/a11y_breadcrumbs/
+\*------------------------------------*/
+.breadcrumbs {
+  --cluster-gap: 0;
+  padding-block: 0.625rem 0.9375rem;
+}
+
+.breadcrumbs ol ::marker {
+  content: "" !important;
+}
+
+.breadcrumbs li {
+  margin: 0;
+  padding-inline: 0 2em;
+  position: relative;
+}
+
+/**
+Separator chevron - see https://codepen.io/jonneal/pen/kptBs
+*/
+.breadcrumbs li:not(:last-child)::after {
+  block-size: 0.5em;
+  border-block-end-width: 0;
+  border-block-start-width: 0.1em;
+  border-inline-end-width: 0.1em;
+  border-inline-start-width: 0;
+  border-style: solid;
+  content: "";
+  display: block;
+  inline-size: 0.5em;
+  inset-block-start: 50%;
+  inset-inline-end: 1.25em;
+  position: absolute;
+  transform: rotate(45deg) translateY(-50%);
+}
+
+[dir=rtl] .breadcrumbs li:not(:last-child)::after {
+  transform: rotate(-45deg) translateY(-50%);
+}
+
+.breadcrumbs a {
+  color: #252525;
+  display: block;
+  padding-block: 0.3125rem;
+}
+.breadcrumbs a:visited, .breadcrumbs a:hover, .breadcrumbs a:active {
+  color: #252525;
+}
+
+.breadcrumbs [aria-current] {
+  font-weight: 600;
+  text-decoration: none;
+}
+.breadcrumbs [aria-current]:focus {
+  outline-color: #252525;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Main
+
+    It is recommended to namespace the id used on `<main>` for your project and
+    remember to use it in the `href` for the "Skip to main content" link. This
+    helps distinguish from any use of `<main>` inside iframe embeds.
+
+    1. We use left and right padding to add some minimum space between the
+    contents of `<main>` and the edges of the parent element or viewport.
+    To avoid making the content narrower than intended, we add an exception
+    to our global box-sizing rule (defined in 30-base/_amplify-reset.scss).
+\*------------------------------------*/
+#amplify-main {
+  --_main-block-space: var(--main-block-space, 2.5rem);
+}
+@media screen and (min-width: 80em) {
+  #amplify-main {
+    --main-block-space: 3.75rem 5rem;
+  }
+}
+#amplify-main {
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: 87.5rem;
+  padding-block: var(--_main-block-space);
+  padding-inline: 1.25rem;
+}
+
+.component + .component {
+  -webkit-margin-before: 1.5rem;
+          margin-block-start: 1.5rem;
+}
+@media screen and (min-width: 48em) {
+  .component + .component {
+    -webkit-margin-before: 3rem;
+            margin-block-start: 3rem;
+  }
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Hero
+\*------------------------------------*/
+.hero {
+  padding-inline: 1.25rem;
+}
+
+.hero-inner {
+  margin-inline: auto;
+  max-inline-size: 64.375rem;
+  padding-block: 1.875rem;
+}
+.hero-inner h1 {
+  margin-top: 0.375rem;
+}
+.hero-inner h1 p {
+  /*22px -> 30px*/
+  margin-left: clamp(1.375rem, 1.2269rem + 0.7407vw, 1.875rem);
+}
+@media screen and (min-width: 37.5em) {
+  .hero-inner h1 {
+    margin-left: 1.75rem;
+    margin-top: 0.625rem;
+  }
+}
+@media screen and (min-width: 37.5em) {
+  .hero-inner {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.hero-right,
+.hero-left {
+  flex: 1;
+}
+
+.hero-kicker {
+  opacity: 0;
+  font-family: "Niramit", "Arial MT Rounded Bold", arial, sans-serif;
+  font-size: 1.25rem;
+  position: static;
+}
+
+.hero-kicker[lang=en] {
+  display: block;
+  opacity: 1;
+}
+
+p.hero-subheading {
+  font-size: clamp(1.625rem, 1.3657rem + 1.2963vw, 2.5rem);
+}
+
+.hero-socials {
+  margin-top: 1.875rem;
+}
+.hero-socials ul li a {
+  display: block;
+  filter: drop-shadow(-0.25rem 0.25rem 0 #302751);
+  transition: 0.3s all;
+}
+.hero-socials ul li a:hover {
+  filter: drop-shadow(0rem 0rem 0 #302751);
+  transform: translate(-0.25rem, 0.25rem);
+}
+@media screen and (min-width: 37.5em) {
+  .hero-socials {
+    margin-left: clamp(0rem, -1.0741rem + 5.3704vw, 3.625rem);
+  }
+}
+
+.hero-right .hero-profile {
+  border-radius: 0.5rem;
+  filter: drop-shadow(0.9375rem 1rem 0 #302751);
+  margin-top: 1.875rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 37.5em) {
+  .hero-right .hero-profile {
+    width: 70%;
+  }
+}
+.hero-right img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+@media screen and (min-width: 37.5em) {
+  .hero-right {
+    display: flex;
+  }
+}
+
+.hero-labels {
+  margin-top: 2.5rem;
+}
+.hero-labels ul {
+  justify-content: center;
+  text-align: center;
+}
+.hero-labels ul li {
+  align-items: center;
+  display: flex;
+  font-size: clamp(1rem, 0.963rem + 0.1852vw, 1.125rem);
+  font-family: "Niramit", "Arial MT Rounded Bold", arial, sans-serif;
+  opacity: 0.7;
+}
+
+.hero-labels ul.hero-profile__labels--lg {
+  display: none;
+  width: 100%;
+}
+.hero-labels ul.hero-profile__labels--lg li {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+}
+.hero-labels ul.hero-profile__labels--lg li::after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 0.1875rem;
+  margin: 0.625rem;
+  opacity: 0.7;
+  width: 0.9375rem;
+}
+@media screen and (min-width: 37.5em) {
+  .hero-labels ul.hero-profile__labels--lg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 37.5em) {
+  .hero-profile__labels--sm {
+    display: none;
+  }
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Text component
+\*------------------------------------*/
+.component--text > * {
+  max-inline-size: 41.25rem;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Quotes
+\*------------------------------------*/
+.component--quote {
+  margin-inline: 0;
+  padding: 1.25rem;
+  -webkit-padding-start: 1.875rem;
+          padding-inline-start: 1.875rem;
+  position: relative;
+}
+.component--quote::before {
+  background-color: #1371c2;
+  block-size: 100%;
+  border-radius: 0.3125rem;
+  content: "";
+  inline-size: 0.625rem;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  position: absolute;
+}
+.component--quote *:not(footer) {
+  color: #1371c2;
+  font-weight: 600;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Image component
+\*------------------------------------*/
+.component--image {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.component--image > * + * {
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+}
+.component--image figcaption {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.0625rem);
+  line-height: 1.5;
+}
+.component--image figcaption > a {
+  display: inline-block;
+  margin: 0;
+  padding-block: 0.625rem;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Avatars
+\*------------------------------------*/
+.avatar {
+  background-color: #fcfcfc;
+  block-size: 6.25rem;
+  border: solid 1px #1371c2;
+  border-radius: 50%;
+  inline-size: 6.25rem;
+  overflow: hidden;
+}
+.avatar img {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+.avatar--med {
+  block-size: 3.125rem;
+  inline-size: 3.125rem;
+}
+
+.avatar--small {
+  block-size: 2rem;
+  inline-size: 2rem;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Video component
+\*------------------------------------*/
+.component--video figcaption {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.0625rem);
+  line-height: 1.5;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+}
+.component--video figcaption > * {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  max-inline-size: 33.75rem;
+}
+.component--video figcaption > a {
+  display: inline-block;
+  margin: 0;
+  padding-block: 0.625rem;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Notes
+\*------------------------------------*/
+.note {
+  background-position: 1.5rem 1.5rem;
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  border: solid 2px;
+  border-inline-start-width: 4px;
+  padding: 1.5rem;
+  -webkit-padding-start: 4.5rem;
+          padding-inline-start: 4.5rem;
+}
+.note > * {
+  max-inline-size: 41.25rem;
+}
+.note > *:first-child {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+.note > *:last-child,
+.note > * li:last-child {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.note--error {
+  background-color: #fef1f1;
+  background-image: url(../svg/note-bg-error.svg);
+  border-color: #f85156;
+  color: #a4141b;
+}
+
+.note--info {
+  background-color: #e9f6ff;
+  background-image: url(../svg/note-bg-info.svg);
+  border-color: #1b90f4;
+  color: #063a69;
+}
+
+.note--success {
+  background-color: #d6fedc;
+  background-image: url(../svg/note-bg-success.svg);
+  border-color: #2dc158;
+  color: #115f28;
+}
+
+.note--warning {
+  background-color: #fef3da;
+  background-image: url(../svg/note-bg-warning.svg);
+  border-color: #c3a62c;
+  color: #605111;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Cards
+
+    1. The `stack` mixin applies flexbox in the column direction,
+    so we need to prevent things like buttons and links
+    from stretching horizontally
+\*------------------------------------*/
+.card {
+  --box-border-clr: transparent;
+  --box-radius: 0.3125rem;
+  background-color: #fcfcfc;
+  box-shadow: -1px 1px 4px 0 rgba(55, 70, 95, 0.12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+  order: 1;
+}
+
+/**
+"Neat cards": for a row of cards of equal height and with the last item
+(e.g. CTA or tag list) always pushed to the bottom edge.
+ */
+.card--neat {
+  block-size: 100%;
+}
+
+.card--neat .card__text > :nth-last-child(2) {
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+}
+.card--neat .card__text > :last-child {
+  -webkit-margin-before: auto;
+          margin-block-start: auto;
+}
+
+.card__text > a:not([class]) {
+  align-self: flex-start; /* 1 */
+  -webkit-margin-before: 0.375rem;
+          margin-block-start: 0.375rem;
+  padding-block: 0.625rem;
+}
+
+.card__heading {
+  font-size: clamp(1.25rem, 1.125rem + 0.625vw, 1.5625rem);
+  line-height: 1.3;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+
+.card__link {
+  border: 0;
+  color: #252525;
+  text-decoration: none;
+}
+.card__link:hover {
+  text-decoration: underline;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Shelves
+    (Used for organising groups of cards, etc.)
+\*------------------------------------*/
+.component--shelves {
+  overflow: hidden;
+}
+
+.component--shelves__intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.component--shelves__intro > * + * {
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+}
+.component--shelves__intro {
+  -webkit-margin-after: 1.875rem;
+          margin-block-end: 1.875rem;
+  max-inline-size: 41.25rem;
+}
+
+@media screen and (min-width: 48em) {
+  .component--shelves__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1.5%;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .component--shelves__items > li {
+    flex: 1 0 33%;
+    max-inline-size: 50%;
+    padding: 1.5%;
+  }
+}
+
+.component--shelves__items > * + * {
+  -webkit-margin-before: 1.25rem;
+          margin-block-start: 1.25rem;
+}
+@media screen and (min-width: 48em) {
+  .component--shelves__items > * + * {
+    -webkit-margin-before: 0;
+            margin-block-start: 0;
+  }
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Progress bar
+
+    Typically used on multi-step forms
+\*------------------------------------*/
+.progress-list {
+  -webkit-margin-after: 1.875rem;
+          margin-block-end: 1.875rem;
+}
+@media screen and (min-width: 48em) {
+  .progress-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.progress-list ::marker {
+  content: "" !important;
+}
+
+.progress-list li {
+  position: relative;
+}
+.progress-list li::after {
+  background-color: #525252;
+  block-size: 0.8125rem;
+  content: "";
+  inline-size: 0.1875rem;
+  inset-block-end: -1rem;
+  inset-inline-start: 1.1875rem;
+  position: absolute;
+}
+@media screen and (min-width: 48em) {
+  .progress-list li::after {
+    block-size: 0.1875rem;
+    inline-size: 100%;
+    inset-block: 2rem auto;
+    inset-inline-start: 50%;
+    z-index: -1;
+  }
+}
+.progress-list li + li {
+  -webkit-margin-before: 1.25rem;
+          margin-block-start: 1.25rem;
+}
+@media screen and (min-width: 48em) {
+  .progress-list li + li {
+    -webkit-margin-before: 0;
+            margin-block-start: 0;
+  }
+}
+
+.progress-list li.complete::after {
+  background-color: #063a69;
+}
+
+.progress-list li:last-child::after {
+  display: none;
+}
+
+.progress-step__inner {
+  align-items: center;
+  display: flex;
+}
+@media screen and (min-width: 48em) {
+  .progress-step__inner {
+    flex-direction: column;
+    -webkit-padding-before: 0.625rem;
+            padding-block-start: 0.625rem;
+    text-align: center;
+  }
+}
+.progress-step__inner > span {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.0625rem);
+  line-height: 1.5;
+  padding: 0.625rem;
+}
+@media screen and (min-width: 48em) {
+  .progress-step__inner > span {
+    inline-size: 9.375rem;
+  }
+}
+
+.progress-step__marker {
+  align-items: center;
+  background-color: #fcfcfc;
+  block-size: 2.75rem;
+  border: solid 3px #525252;
+  border-radius: 50%;
+  display: flex;
+  inline-size: 2.75rem;
+  justify-content: center;
+}
+@media screen and (min-width: 48em) {
+  .progress-step__marker {
+    box-shadow: 0 0 0 0.625rem #fcfcfc;
+  }
+}
+
+.progress-step__marker.complete {
+  background-color: #063a69;
+  border-color: #063a69;
+  color: #fcfcfc;
+  position: relative;
+}
+.progress-step__marker.complete::before, .progress-step__marker.complete::after {
+  background-color: #063a69;
+  content: "";
+  position: absolute;
+}
+.progress-step__marker.complete::before {
+  block-size: 2.375rem;
+  border-radius: 50%;
+  inline-size: 2.375rem;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+.progress-step__marker.complete::after {
+  block-size: 0.5625rem;
+  border: solid;
+  border-block-start-color: transparent;
+  border-width: 0 0 3px 3px;
+  inline-size: 1.125rem;
+  inset-block-start: 0.8125rem;
+  inset-inline-start: 0.625rem;
+  transform: rotate(-45deg);
+}
+
+.progress-list a {
+  color: #525252;
+}
+.progress-list a:visited {
+  color: #063a69;
+}
+.progress-list a:hover {
+  color: #0b80e5;
+}
+.progress-list a:active {
+  color: #000;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Tag list
+
+    1. High contrast themes tend to eliminate background-color, so we need a border
+    to mark the shape and boundaries of each tag. Match the border-color to the
+    background-color if you do not want the border to be obvious.
+
+    2. Meet WCAG AAA target size requirements for this font size - see
+    https://www.w3.org/WAI/WCAG21/Understanding/target-size.html
+\*------------------------------------*/
+.tag {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.0625rem);
+  line-height: 1.5;
+  background-color: #6f6f6f;
+  border: solid 1px #6f6f6f; /* 1 */
+  border-radius: 0.25rem;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5625rem; /* 2 */
+  text-decoration: none;
+}
+.tag:hover {
+  text-decoration: underline;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Collapsible sections
+
+    1. Restrict line-length for readability
+\*------------------------------------*/
+.component--collapsibles {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.component--collapsibles > * + * {
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+}
+
+[data-heading=collapsibles] {
+  font-size: clamp(1.125rem, 1.025rem + 0.5vw, 1.375rem);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.component--collapsibles__panel {
+  background-color: #fcfcfc;
+  border-radius: 0.375rem;
+  box-shadow: -0.0625rem 0.0625rem 0.25rem rgba(55, 70, 95, 0.12);
+  padding: 1.5625rem;
+}
+
+.component--collapsibles__panel__content > * {
+  max-inline-size: 41.25rem; /* 1 */
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Carousel - no-js customisation of Splide
+\*------------------------------------*/
+/*
+ Splide hides the entire carousel if there is no JS.
+ Amplify prefers to keep the slides visible and stacked vertically.
+ */
+.no-js .splide {
+  visibility: visible;
+}
+.no-js .splide__list {
+  display: block;
+}
+.no-js .splide__list > * + * {
+  margin-top: 1rem;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Search
+\*------------------------------------*/
+.search-form {
+  --sidebar-main-width: 70%;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Pagination
+
+    1. Centre the content until it wraps onto more than one line, at which point it’s no longer centred.
+    See https://meyerweb.com/eric/thoughts/2022/04/26/flexibly-centering-an-element-with-side-aligned-content/
+\*------------------------------------*/
+.pagination {
+  -webkit-margin-before: 2.5rem;
+          margin-block-start: 2.5rem;
+  margin-inline: auto; /* 1 */
+  max-inline-size: -webkit-max-content;
+  max-inline-size: max-content; /* 1 */
+}
+
+.pagination__list a {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.0625rem);
+  line-height: 1.5;
+  color: #000;
+  display: block;
+  padding-block: 0.6875rem;
+  padding-inline: 1.125rem;
+  text-decoration: none;
+}
+.pagination__list a:visited {
+  color: #000;
+}
+.pagination__list a[href]:hover {
+  text-decoration: underline;
+}
+.pagination__list a[href][aria-current] {
+  background-color: #1371c2;
+  color: #fcfcfc;
+  font-weight: 700;
+}
+.pagination__list a[href][aria-current]:hover {
+  color: #fcfcfc;
+  text-decoration: none;
+}
+
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Global footer
+
+    1. Needed for sticky footer
+    2. Because autoprefixer does not cover IE grid
+
+    Amplify uses the grid implementation of the sticky footer
+    from https://css-tricks.com/couple-takes-sticky-footer/ -
+
+   The footer isn't sticky in IE, but the flexbox alternative
+   results in display issues, caused by components with overflow
+   not set to visible (e.g. carousels) if used within the sidebar layout.
+
+\*------------------------------------*/
+.global-footer {
+  grid-row: 2/3; /* 1 */
+  -ms-grid-row-span: 1; /* 2 */
+  padding-block: 1.25rem 1.5625rem;
+  padding-inline: 0;
+}
+.global-footer .l-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.global-footer .l-center > * + * {
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+}
+.global-footer a,
+.global-footer .copyright {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.0625rem);
+  line-height: 1.5;
+}
+.global-footer a {
+  color: #252525;
+}
+.global-footer a:visited, .global-footer a:hover, .global-footer a:active {
+  color: #252525;
+}
+
+/*------------------------------------*\
+    #Templates
+\*------------------------------------*/
+/*------------------------------------*\
+    #Amplify
+
+    1. Used purely for the static Amplify site
+\*------------------------------------*/
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Amplify guide
+
+    Used purely for the static Amplify site
+\*------------------------------------*/
+.amplify .global-header {
+  background-color: #252525;
+  color: #fcfcfc;
+  padding-block: 0.625rem;
+}
+
+.amplify .global-header__link {
+  font-size: clamp(1.25rem, 1.125rem + 0.625vw, 1.5625rem);
+  line-height: 1.3;
+  color: #fcfcfc;
+  padding-block: 0.3125rem;
+  text-decoration: none;
+}
+.amplify .global-header__link:hover, .amplify .global-header__link:visited {
+  color: #fcfcfc;
+}
+.amplify .global-header__link:hover {
+  text-decoration: underline;
+}
+
+.amplify .global-header + .global-nav {
+  -webkit-border-after: solid 2px #c6c6c6;
+          border-block-end: solid 2px #c6c6c6;
+  padding-block: 0.625rem;
+}
+
+.amplify .global-nav__link {
+  -webkit-border-after: solid 4px transparent;
+          border-block-end: solid 4px transparent;
+  color: #1371c2;
+  display: block;
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding: 0.5rem 0.3125rem;
+  text-decoration: none;
+}
+.amplify .global-nav__link:hover, .amplify .global-nav__link:visited {
+  color: #1371c2;
+}
+.amplify .global-nav__link:hover {
+  text-decoration: underline;
+}
+
+.amplify .current .global-nav__link {
+  border-block-end-color: #252525;
+  color: #252525;
+}
+.amplify .current .global-nav__link:hover {
+  text-decoration: none;
+}
+
+.amplify .nav-secondary__link {
+  color: #1371c2;
+  display: block;
+  padding-block: 0.5625rem;
+  position: relative;
+  text-decoration: none;
+}
+.amplify .nav-secondary__link:hover {
+  text-decoration: underline;
+}
+
+.amplify .nav-secondary__link[aria-current] {
+  color: #252525;
+}
+.amplify .nav-secondary__link[aria-current]::before {
+  background-color: #252525;
+  block-size: 1.5rem;
+  content: "";
+  inline-size: 4px;
+  inset-block-start: 50%;
+  inset-inline-start: -0.75rem;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.amplify .nav-secondary__link[aria-current]:hover {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 64em) {
+  .amplify .content-wrap {
+    display: grid;
+    grid-template-columns: 25% 10% 65%;
+    -ms-grid-columns: 25% 10% 65%;
+    grid-template-rows: 1fr;
+    -ms-grid-rows: 1fr;
+  }
+}
+
+.amplify .content-wrap > *:first-child {
+  grid-column: 1/2;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.amplify .content-wrap > *:last-child {
+  grid-column: 3/4;
+  grid-column: 3;
+  grid-row: 1;
+  -webkit-margin-before: 1.875rem;
+          margin-block-start: 1.875rem;
+}
+@media screen and (min-width: 64em) {
+  .amplify .content-wrap > *:last-child {
+    -webkit-margin-before: 0;
+            margin-block-start: 0;
+  }
+}
+
+.amplify .example + .example {
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+}
+
+.amplify .custom-box .l-box {
+  border: none;
+  outline: solid 2px transparent;
+  outline-offset: -2px;
+}
+
+.amplify .search-bar .not-sidebar {
+  min-inline-size: 70%;
+}
+
+/* 1 */
+/*------------------------------------*\
+    #Utilities
+\*------------------------------------*/
+/*------------------------------------*\
+    #Amplify CSS reset
+
+    Inspiration:
+    - https://piccalil.li/blog/a-more-modern-css-reset/
+    - https://www.joshwcomeau.com/css/custom-css-reset/
+    - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+\*------------------------------------*/
+/*------------------------------------*\
+    #Alignment utilities
+
+    1. Allows text-direction to change with writing direction
+\*------------------------------------*/
+.u-float-left {
+  float: left;
+  float: inline-start; /* 1 */
+}
+
+.u-float-right {
+  float: right;
+  float: inline-end; /* 1 */
+}
+
+.u-text-center {
+  text-align: center;
+  text-wrap: balance;
+}
+
+.u-text-left {
+  text-align: left;
+  text-align: start; /* 1 */
+}
+
+.u-text-right {
+  text-align: right;
+  text-align: end; /* 1 */
+}
+
+/**
+Change text-alignment at the "laptop" breakpoint,
+as defined in /10-settings/breakpoints
+
+1. Logical property allows text-direction to change with `ltr`
+ */
+@media screen and (min-width: 80em) {
+  .u-text-left-from-lap {
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .u-text-center-from-lap {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .u-text-right-from-lap {
+    text-align: end;
+  }
+}
+
+/*------------------------------------*\
+    #Clearfix utility
+
+    https://css-tricks.com/snippets/css/clear-fix/
+
+    Extend the clearfix placeholder with Sass to avoid
+    having it appear over and over in your markup.
+\*------------------------------------*/
+/*------------------------------------*\
+    #Layout utilities
+\*------------------------------------*/
+/**
+For a full-viewport-width element inside a limited width parent.
+The parent must be exactly centered in the browser in order for this
+to work - see https://css-tricks.com/full-width-containers-limited-width-parents/
+ */
+.u-full-width {
+  inline-size: 100vw;
+  inset-inline: 50%;
+  margin-inline: -50vw;
+  position: relative;
+}
+
+/**
+To horizontally center a block-level item
+ */
+.u-center {
+  margin-inline: auto;
+  position: relative;
+}
+
+/*------------------------------------*\
+    #Margin utilities
+
+    Double specificity in classname avoids use of !important
+\*------------------------------------*/
+.u-no-margin.u-no-margin {
+  margin: 0;
+}
+
+.u-no-margin-top.u-no-margin-top {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}

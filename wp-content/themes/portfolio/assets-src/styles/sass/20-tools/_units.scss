@@ -10,6 +10,7 @@ $browser-context: 16; // Default
  #em
  */
 @function em($pixels, $context: $browser-context) {
+
 	@return #{math.div($pixels, $context)}em;
 }
 
@@ -18,6 +19,7 @@ $browser-context: 16; // Default
  #rem
  */
 @function rem($pixels, $context: $browser-context) {
+
 	@return #{math.div($pixels, $context)}rem;
 }
 
@@ -26,6 +28,7 @@ $browser-context: 16; // Default
  #px
  */
 @function px($target, $context: $browser-context) {
+
 	@return #{$target * $context}px;
 }
 
@@ -34,6 +37,7 @@ $browser-context: 16; // Default
  #Return a number without a unit
  */
 @function number($target, $context: $browser-context) {
+
 	@return math.div($target, $context);
 }
 
@@ -42,5 +46,6 @@ $browser-context: 16; // Default
  #Remove any unit present to return a unitless number
  */
 @function no-units($number) {
+
 	@return math.div($number, ($number * 0 + 1));
 }

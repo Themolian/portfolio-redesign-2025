@@ -1,0 +1,14 @@
+{
+    "name": "ilike/html",
+    "autoload": {
+        "psr-4": {
+            "Ilike\\Html\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jamie"
+        }
+    ],
+    "require": {}
+}

@@ -7,6 +7,7 @@
 @use '../20-tools' as *;
 
 blockquote {
+
 	@include text-25;
 
     margin-block: 2rem;
@@ -34,10 +35,11 @@ blockquote {
     }
 
     footer {
+
         @include text-17;
 
         font-style: normal;
-        font-weight: normal;
+        font-weight: 400;
         margin-block-start: 1rem;
     }
 }

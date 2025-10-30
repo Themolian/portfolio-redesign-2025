@@ -17,6 +17,7 @@
 	padding: rem(25);
 
 	.js-collapsible-heading {
+
 		@include text-22;
 
 		font-weight: $emphasis;
@@ -30,10 +31,12 @@
 
 
 	.js-collapsible-label {
+
 		@include text-17;
 	}
 
 	&:hover {
+
 		.js-collapsible-heading {
 			color: $link-color;
 		}
@@ -44,12 +47,14 @@
 	}
 
 	&[aria-expanded="false"] {
+
 		.circle-up {
 			display: none;
 		}
 	}
 
 	&[aria-expanded="true"] {
+
 		.circle-down {
 			display: none;
 		}

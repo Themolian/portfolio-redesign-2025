@@ -5,100 +5,94 @@
 /*------------------------------------*\
     #Fonts
 \*------------------------------------*/
-@use 'sass/00-fonts/fonts';
+@use "sass/00-fonts/fonts";
 
 /*------------------------------------*\
     #Base
 \*------------------------------------*/
-@use 'sass/30-base/amplify-reset';
-@use 'sass/30-base/body';
-@use 'sass/30-base/typography';
-@use 'sass/30-base/hide-and-show';
-@use 'sass/30-base/flow-elements';
-@use 'sass/30-base/buttons-and-links';
-@use 'sass/30-base/skip-link';
-@use 'sass/30-base/details-and-summary';
-@use 'sass/30-base/icons';
-@use 'sass/30-base/figure';
-@use 'sass/30-base/lists';
-@use 'sass/30-base/blockquotes';
-@use 'sass/30-base/tables';
-@use 'sass/30-base/animation';
-@use 'sass/30-base/focus';
-
+@use "sass/30-base/amplify-reset";
+@use "sass/30-base/body";
+@use "sass/30-base/typography";
+@use "sass/30-base/hide-and-show";
+@use "sass/30-base/flow-elements";
+@use "sass/30-base/buttons-and-links";
+@use "sass/30-base/skip-link";
+@use "sass/30-base/details-and-summary";
+@use "sass/30-base/icons";
+@use "sass/30-base/figure";
+@use "sass/30-base/lists";
+@use "sass/30-base/blockquotes";
+@use "sass/30-base/tables";
+@use "sass/30-base/animation";
+@use "sass/30-base/focus";
 
 /*------------------------------------*\
     #Forms
 \*------------------------------------*/
-@use 'sass/35-forms/forms';
-@use 'sass/35-forms/search-input';
-@use 'sass/35-forms/checkboxes-radios';
-@use 'sass/35-forms/select';
-@use 'sass/35-forms/memorable-dates';
-@use 'sass/35-forms/segmented-options';
-
+@use "sass/35-forms/forms";
+@use "sass/35-forms/search-input";
+@use "sass/35-forms/checkboxes-radios";
+@use "sass/35-forms/select";
+@use "sass/35-forms/memorable-dates";
+@use "sass/35-forms/segmented-options";
 
 /*------------------------------------*\
     #Layout helpers
 \*------------------------------------*/
-@use 'sass/40-layout-helpers/box';
-@use 'sass/40-layout-helpers/center';
-@use 'sass/40-layout-helpers/cover';
-@use 'sass/40-layout-helpers/cluster';
-@use 'sass/40-layout-helpers/frame';
-@use 'sass/40-layout-helpers/sidebar';
-@use 'sass/40-layout-helpers/switcher';
-@use 'sass/40-layout-helpers/autogrid';
-
+@use "sass/40-layout-helpers/box";
+@use "sass/40-layout-helpers/center";
+@use "sass/40-layout-helpers/cover";
+@use "sass/40-layout-helpers/cluster";
+@use "sass/40-layout-helpers/frame";
+@use "sass/40-layout-helpers/sidebar";
+@use "sass/40-layout-helpers/switcher";
+@use "sass/40-layout-helpers/autogrid";
 
 /*------------------------------------*\
     #Core components
 \*------------------------------------*/
-@use 'sass/50-core-components/header';
-@use 'sass/50-core-components/logo';
-@use 'sass/50-core-components/navigation';
-@use 'sass/50-core-components/breadcrumbs';
-@use 'sass/50-core-components/main';
-//@use 'sass/50-core-components/hero';
-@use 'sass/50-core-components/text';
-@use 'sass/50-core-components/quotes';
-@use 'sass/50-core-components/images';
-@use 'sass/50-core-components/avatars';
-@use 'sass/50-core-components/video';
-@use 'sass/50-core-components/notes';
+@use "sass/50-core-components/header";
+@use "sass/50-core-components/logo";
+@use "sass/50-core-components/navigation";
+@use "sass/50-core-components/breadcrumbs";
+@use "sass/50-core-components/main";
+@use "sass/50-core-components/hero";
+@use "sass/50-core-components/text";
+@use "sass/50-core-components/quotes";
+@use "sass/50-core-components/images";
+@use "sass/50-core-components/avatars";
+@use "sass/50-core-components/video";
+@use "sass/50-core-components/notes";
 //@use 'sass/50-core-components/social';
-@use 'sass/50-core-components/cards';
-@use 'sass/50-core-components/shelves';
-@use 'sass/50-core-components/progress-indicator';
+@use "sass/50-core-components/cards";
+@use "sass/50-core-components/shelves";
+@use "sass/50-core-components/progress-indicator";
 //@use 'sass/50-core-components/payment-details';
-@use 'sass/50-core-components/tag-list';
+@use "sass/50-core-components/tag-list";
 //@use 'sass/50-core-components/fifty-fifty';
-@use 'sass/50-core-components/collapsibles';
-@use 'sass/50-core-components/carousel';
-@use 'sass/50-core-components/search';
+@use "sass/50-core-components/collapsibles";
+@use "sass/50-core-components/carousel";
+@use "sass/50-core-components/search";
 //@use 'sass/50-core-components/meta-info';
-@use 'sass/50-core-components/pagination';
-@use 'sass/50-core-components/footer';
-
+@use "sass/50-core-components/pagination";
+@use "sass/50-core-components/footer";
 
 /*------------------------------------*\
     #Templates
 \*------------------------------------*/
 // Add here...
 
-
 /*------------------------------------*\
     #Amplify
 
     1. Used purely for the static Amplify site
 \*------------------------------------*/
-@use 'sass/85-amplify/amplify-guide'; /* 1 */
-
+@use "sass/85-amplify/amplify-guide"; /* 1 */
 
 /*------------------------------------*\
     #Utilities
 \*------------------------------------*/
-@use 'sass/90-utilities/alignments';
-@use 'sass/90-utilities/clearfix';
-@use 'sass/90-utilities/layout';
-@use 'sass/90-utilities/margins';
+@use "sass/90-utilities/alignments";
+@use "sass/90-utilities/clearfix";
+@use "sass/90-utilities/layout";
+@use "sass/90-utilities/margins";

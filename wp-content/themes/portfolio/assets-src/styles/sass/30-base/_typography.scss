@@ -4,96 +4,124 @@
     1. Makes elements like <code> a more in-proportion size based on our base font
     2. Starting text-wrap style is optional and fine to override/remove as required by a design
 \*------------------------------------*/
-@use '../10-settings' as *;
-@use '../20-tools' as *;
+@use "../10-settings" as *;
+@use "../20-tools" as *;
 
 body {
-    @include text-body;
+
+	@include text-body;
 
 	font-family: $font-family;
-    font-size-adjust: from-font; /* 1 */
+	font-size-adjust: from-font; /* 1 */
 	font-style: $font-style;
 	font-weight: $font-weight;
 }
 
-
 p {
-    margin-block: clamp(0.5rem, calc(0.3rem + 1vw), 1rem);
-    max-inline-size: 60ch;
-    text-wrap: pretty; /* 2 */
+	margin-block: clamp(0.5rem, calc(0.3rem + 1vw), 1rem);
+	max-inline-size: 60ch;
+	text-wrap: pretty; /* 2 */
 }
 
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-heading;
 	font-weight: $emphasis;
-    margin-block-end: clamp(0.5rem, calc(0.3rem + 1vw), 1rem);
+	margin-block-end: clamp(0.5rem, calc(0.3rem + 1vw), 1rem);
 }
 
-h1, h2, h3, h4 {
-    text-wrap: balance; /* 2 */
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance; /* 2 */
 }
 
-h1, h2, h3 {
-    hyphens: auto;
+h1,
+h2,
+h3 {
+	hyphens: auto;
 }
 
-h2, h3, h4, h5, h6 {
-    margin-block-start: rem(32);
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-block-start: rem(32);
 }
 
 h1,
 .text-40 {
+
 	@include text-40;
 
-    max-inline-size: 20ch;
+	max-inline-size: 20ch;
+}
+
+.hero h1,
+.text-50 {
+
+	@include text-50;
+
+	max-inline-size: 20ch;
 }
 
 h2,
-.text-36 {
-    @include text-36;
+.text-30 {
 
-    max-inline-size: 35ch;
+	@include text-30;
+
+	max-inline-size: 35ch;
 }
 
 h3,
-.text-32 {
-    @include text-32;
+.text-24 {
 
-    max-inline-size: 35ch;
+	@include text-24;
+
+	max-inline-size: 35ch;
 }
 
 h4,
 .text-28 {
-    @include text-28;
+
+	@include text-28;
 }
 
 h5,
 .text-25 {
-    @include text-25;
+
+	@include text-25;
 }
 
 h6,
 .text-22 {
-    @include text-22;
+
+	@include text-22;
 }
 
 .text-17 {
-    @include text-17;
-}
 
+	@include text-17;
+}
 
 .lead {
-    @include text-28;
 
-    margin-block-end: clamp(2.5rem, calc(2.3rem + 1vw), 3rem);
-    text-wrap: balance;
+	@include text-28;
+
+	margin-block-end: clamp(2.5rem, calc(2.3rem + 1vw), 3rem);
+	text-wrap: balance;
 }
-
 
 /**
 When Font Face Observer has detected that the @font-face files are loaded, then we
 can safely use the web fonts instead of the system fonts.
  */
 .fonts-loaded body {
-	font-family: $font-loaded-family;
+	font-family: $font-body;
 }

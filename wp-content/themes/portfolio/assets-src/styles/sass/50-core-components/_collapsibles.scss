@@ -7,11 +7,13 @@
 @use '../20-tools' as *;
 
 .component--collapsibles {
+
 	@include stack;
 }
 
 
 [data-heading="collapsibles"] {
+
 	@include text-22;
 
     margin: 0;

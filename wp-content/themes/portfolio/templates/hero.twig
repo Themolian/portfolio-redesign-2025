@@ -1,0 +1,47 @@
+{% if page_template is same as 'Homepage' %}
+    <div class="hero">
+        <div class="hero-inner">
+            <div class="hero-left">
+                {% for kicker in hero_kickers %}
+                    <span class="hero-kicker" {% if loop.index != 1 %}hidden{% endif %} lang="{{ kicker.lang }}" data-active-lang>{{ kicker.text }}</span>
+                {% endfor %}
+                <h1>
+                    {{ hero_heading }}
+                    <p class="hero-subheading">{{ hero_subheading }}</p>
+                </h1>
+                {% if socials and socials is not empty %}
+                    <div class="hero-socials">
+                        <ul class="clean-list l-cluster">
+                            {% for social in socials %}
+                                <li><a href="{{ social.url }}"><img src="{{ social.icon.url }}" alt="{{ social.icon.alt }}"></a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="hero-right">
+                {% if profile_labels is not empty %}
+                    <div class="hero-labels">
+                        <ul class="clean-list hero-profile__labels hero-profile__labels--lg">
+                            {% for label in profile_labels %}
+                                <li>{{ label.label }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+                <div class="hero-profile">
+                    <img src="{{ hero_profile.url }}" alt="{{ hero_profile.alt }}" loading="lazy">
+                </div>
+                {% if profile_labels is not empty %}
+                    <div class="hero-labels">
+                        <ul class="clean-list hero-profile__labels hero-profile__labels--sm l-cluster">
+                            {% for label in profile_labels %}
+                                <li>{{ label.label }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endif %}

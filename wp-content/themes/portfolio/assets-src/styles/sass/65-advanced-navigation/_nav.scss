@@ -8,81 +8,83 @@
 
     N.B. aria-expanded attribute is managed by JS
 \*------------------------------------*/
-@use '../10-settings' as *;
-@use '../20-tools' as *;
+@use "../10-settings" as *;
+@use "../20-tools" as *;
 
 .js .global-nav {
-    // Make the <button> the target for click events, not any child elements - e.g. <svg>, <span>
-    [data-trigger] > * {
-        pointer-events: none;
-    }
+	// Make the <button> the target for click events, not any child elements - e.g. <svg>, <span>
+	[data-trigger] > * {
+		pointer-events: none;
+	}
 
-    [data-trigger="mobile-nav"] {
-        > * {
-            pointer-events: none;
-        }
+	[data-trigger="mobile-nav"] {
 
-        .close {
-            display: none;
-        }
+		> * {
+			pointer-events: none;
+		}
 
-        .open {
-            display: block;
-        }
+		.close {
+			display: none;
+		}
 
-        &[aria-expanded="true"]{
-            .close {
-                display: block;
-            }
+		.open {
+			display: block;
+		}
 
-            .open {
-                display: none;
-            }
-        }
-    }
+		&[aria-expanded="true"] {
 
-    [aria-expanded="false"] + * {
-        display: none;
-    }
+			.close {
+				display: block;
+			}
 
-    > ul {
-        background-color: $off-white;
-        inline-size: 100%;
-        inset-inline-start: 0;
-        position: absolute;
+			.open {
+				display: none;
+			}
+		}
+	}
 
-        @include mq($bp-tab-portrait) {
-            align-items: center;
-            display: flex;
-            inline-size: auto;
-            position: static;
-        }
-    }
+	[aria-expanded="false"] + * {
+		// display: none;
+	}
 
-    > ul > li {
-        @include mq($bp-tab-portrait) {
-            position: relative;
-        }
-    }
+	> div ul {
+		align-items: center;
+		display: flex;
+		position: static;
+		inline-size: 100%;
+		inset-inline-start: 0;
 
-    > ul > li + li {
-        @include mq($bp-tab-portrait) {
-            margin-inline-start: rem(5);
-        }
-    }
+		@include mq($bp-tab-portrait) {
+			inline-size: auto;
+		}
+	}
 
-    [data-nav="submenu"] {
-        background-color: $off-white;
-        padding-inline-start: 0;
+	> div ul > li {
 
-        @include mq($bp-tab-portrait) {
-            inset-inline-start: 0;
-            position: absolute;
-        }
-    }
+		@include mq($bp-tab-portrait) {
+			position: relative;
+		}
+	}
 
-    /* Prevent offscreen-submenus */
-    [data-nav="submenu"].js-sub-menu-right {
-        inset-inline: auto 0;
-    }
+	> div ul > li + li {
+
+		@include mq($bp-tab-portrait) {
+			margin-inline-start: rem(5);
+		}
+	}
+
+	[data-nav="submenu"] {
+		background-color: $off-white;
+		padding-inline-start: 0;
+
+		@include mq($bp-tab-portrait) {
+			inset-inline-start: 0;
+			position: absolute;
+		}
+	}
+
+	/* Prevent offscreen-submenus */
+	[data-nav="submenu"].js-sub-menu-right {
+		inset-inline: auto 0;
+	}
 }

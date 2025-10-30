@@ -14,6 +14,7 @@ See https://github.com/mozdevs/cssremedy/issues/11
  */
 @media screen and (prefers-reduced-motion: reduce),
 (update: slow) {
+
     *,
     ::before,
     ::after {
@@ -28,6 +29,7 @@ See https://github.com/mozdevs/cssremedy/issues/11
 }
 
 @keyframes scroll-shadow-inset {
+
     /* start with inset shadow on right */
     from {
         box-shadow: inset -10px -10px 15px 0 rgb(0 0 0 / 30%);

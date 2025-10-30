@@ -1,21 +1,22 @@
 /*------------------------------------*\
     #Skip link
 \*------------------------------------*/
-@use '../10-settings' as *;
-@use '../20-tools' as *;
-@use 'hide-and-show' as *;
+@use "../10-settings" as *;
+@use "../20-tools" as *;
+@use "hide-and-show" as *;
 
 .skip-link.skip-link {
-	@extend .visuallyhidden;
+
+	@extend %visuallyhidden;
 
 	background-color: $focus-color;
-    box-shadow: inset 0 0 0 2px $black;
+	box-shadow: inset 0 0 0 2px $black;
 	color: $black;
 	padding-block: em(10);
 	padding-inline: em(15);
-    position: absolute;
+	position: absolute;
 	text-decoration: none;
-    z-index: 999;
+	z-index: 999;
 
 	&:focus {
 		inset-block-start: 2px;

@@ -5,9 +5,11 @@
 @use '../20-tools' as *;
 
 .component--image {
+
 	@include stack;
 
 	figcaption {
+
 		@include text-17;
 
 		> a {

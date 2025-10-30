@@ -9,6 +9,7 @@ $pesticide: false; // Change to true for debugging layouts
 */
 
 @if $pesticide == true {
+
 	body {
         outline: 1px solid #2980b9 !important;
     }
@@ -91,11 +92,11 @@ $pesticide: false; // Change to true for debugging layouts
 
 	dd {outline: 1px solid #e80174 !important;}
 
-	figure {outline: 1px solid #ff00bb !important;}
+	figure {outline: 1px solid #f0b !important;}
 
 	figcaption {outline: 1px solid #bf0032 !important;}
 
-	table {outline: 1px solid #00cc99 !important;}
+	table {outline: 1px solid #0c9 !important;}
 
 	caption {outline: 1px solid #37ffc4 !important;}
 
@@ -161,7 +162,7 @@ $pesticide: false; // Change to true for debugging layouts
 
 	embed {outline: 1px solid #98daca !important;}
 
-	object {outline: 1px solid #00cc99 !important;}
+	object {outline: 1px solid #0c9 !important;}
 
 	param {outline: 1px solid #37ffc4 !important;}
 

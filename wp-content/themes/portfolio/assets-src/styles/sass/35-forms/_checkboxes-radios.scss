@@ -14,6 +14,7 @@
 
 /* stylelint-disable no-descending-specificity */
 .amplify-form {
+
     /* Select any <div> which contains a checkbox or radio input */
     div:has(> :where([type="checkbox"], [type="radio"])) {
         display: flex;

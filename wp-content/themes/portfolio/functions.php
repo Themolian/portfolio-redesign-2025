@@ -138,9 +138,20 @@ add_action( 'widgets_init', 'portfolio_widgets_init' );
  * Enqueue scripts and styles.
  */
 function portfolio_scripts() {
-	wp_enqueue_style( 'portfolio-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'portfolio-style', 'rtl', 'replace' );
 
+	$media_queries = implode(', ', [
+		'only print, screen and (min-width: 1vm),',
+		'only all and (-ms-high-contrast: none), only all and (-ms-high-contrast: active),',
+		'only all and (pointer: fine), only all and (pointer: coarse), only all and (pointer: none)',
+		'only all and (-webkit-min-device-pixel-ratio:0) and (min-color-index: 0),',
+		'only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)'
+	]);
+
+	wp_enqueue_style( 'core-stylesheet', get_template_directory_uri() . '/dist/styles/core.min.css', array(), _S_VERSION, 'all' );
+	wp_enqueue_style( 'advanced-stylesheet', get_template_directory_uri() . '/dist/styles/advanced.min.css', array(), _S_VERSION, $media_queries );
+	wp_enqueue_style( 'print-stylesheet', get_template_directory_uri() . '/dist/styles/print.min.css', array(), _S_VERSION, 'print' );
+
+	wp_enqueue_script( 'fontface-observer', get_template_directory_uri() . '/dist/js/libraries/fontfaceobserver.js', array(), _S_VERSION);
 	wp_enqueue_script( 'portfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -148,6 +159,46 @@ function portfolio_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'portfolio_scripts' );
+
+/**
+ * Add `fonts-loaded` class to root element when web fonts are loaded.
+ * Check whether CSS media query and browser media query match - if so,
+ * add main JS file to `head` and swap `no-js` class on root element to `js`
+ */
+if ( ! function_exists( 'amplify_head_scripts' ) ) :
+
+	function amplify_head_scripts() {
+		$themelink = get_template_directory_uri();
+		$script =<<<EOD
+<script>
+let fontA = new FontFaceObserver('Niramit');
+let fontB = new FontFaceObserver('Afacad');
+
+			Promise.all([fontA.load(), fontB.load()]).then(function () {
+				document.documentElement.className += " fonts-loaded";
+			});
+
+			(function() {
+				let linkEl = document.getElementById('advanced-stylesheet-css');
+				if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
+					let head = document.querySelector('head');
+					// Add main JS
+					let jsMain = document.createElement('script');
+					jsMain.src = '{$themelink}/dist/js/main.js?ver=1.0.0';
+					jsMain.defer = true;
+					head.appendChild(jsMain);
+					// Update classname to show JS is available
+					(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);
+				}
+			})();
+</script>
+EOD;
+		echo $script;
+	}
+
+	add_action('wp_head', 'amplify_head_scripts', 99);
+
+endif;
 
 /**
  * Implement the Custom Header feature.
@@ -174,6 +225,38 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+
+/**
+ * Get socials data
+ */
+function get_socials() {
+	
+	$socials = array();
+
+	if(have_rows('social_media', 'options')) {
+		while(have_rows('social_media', 'options')) {
+			the_row();
+			$social = array();
+
+			if(get_sub_field('social_icon')) {
+				$social['icon']['url'] = get_sub_field('social_icon')['url'];
+			}
+
+			if(get_sub_field('social_icon') && get_sub_field('social_alt')) {
+				$social['icon']['alt'] = get_sub_field('social_alt');
+			}
+
+			if(get_sub_field('social_url')) {
+				$social['url'] = get_sub_field('social_url');
+			}
+
+			array_push($socials, $social);
+		}
+	}
+
+	return $socials;
+}
 
 /**
  * Timber

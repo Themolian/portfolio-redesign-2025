@@ -48,7 +48,7 @@ function portfolio_post_types() {
 		'supports'           => array( 'title', 'author', 'thumbnail', 'excerpt', 'comments' ),
 	);
 
-	register_post_type( 'project', $args );
+	register_post_type( 'projects', $args );
 }
 
 add_action( 'init', 'portfolio_post_types' );

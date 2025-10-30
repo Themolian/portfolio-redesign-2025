@@ -37,6 +37,7 @@ i {
 small,
 .small,
 .small-caps {
+
 	@include text-17;
 }
 
@@ -86,6 +87,7 @@ sup {
 
 /* This is quite a new property, so we want to make sure code styles are not huge or tiny */
 @supports not (font-size-adjust: from-font) {
+
     :where(code, kbd, samp) {
         font-size: 0.8em;
     }

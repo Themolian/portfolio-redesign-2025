@@ -40,6 +40,7 @@ as defined in /10-settings/breakpoints
 1. Logical property allows text-direction to change with `ltr`
  */
 .u-text-left-from-lap {
+
 	@include mq($bp-lap) {
 		text-align: start;
 	}
@@ -47,6 +48,7 @@ as defined in /10-settings/breakpoints
 
 
 .u-text-center-from-lap {
+
 	@include mq($bp-lap) {
 		text-align: center;
 	}
@@ -54,6 +56,7 @@ as defined in /10-settings/breakpoints
 
 
 .u-text-right-from-lap {
+
 	@include mq($bp-lap) {
 		text-align: end;
 	}

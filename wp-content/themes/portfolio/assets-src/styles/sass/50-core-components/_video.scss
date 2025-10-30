@@ -5,7 +5,9 @@
 @use '../20-tools' as *;
 
 .component--video {
+
 	figcaption {
+
 		@include text-17;
 
 		margin-block-start: 1em;

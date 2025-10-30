@@ -15,7 +15,9 @@
 
 
 .pagination__list {
+
 	a {
+
 		@include text-17;
 
 		color: $black;
@@ -36,7 +38,7 @@
 	a[href][aria-current] {
 		background-color: $link-color;
 		color: $off-white;
-		font-weight: bold;
+		font-weight: 700;
 
 		&:hover {
 			color: $off-white;

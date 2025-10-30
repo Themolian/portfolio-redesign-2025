@@ -22,11 +22,13 @@
 	padding-inline: 0;
 
 	.l-center {
+
 		@include stack(1rem);
 	}
 
 	a,
 	.copyright {
+
 		@include text-17;
 	}
 

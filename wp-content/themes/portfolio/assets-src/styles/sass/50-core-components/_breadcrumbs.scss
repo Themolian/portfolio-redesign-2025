@@ -28,6 +28,7 @@
 Separator chevron - see https://codepen.io/jonneal/pen/kptBs
 */
 .breadcrumbs li:not(:last-child) {
+
     &::after {
         block-size: 0.5em;
         border-block-end-width: 0;
@@ -46,7 +47,9 @@ Separator chevron - see https://codepen.io/jonneal/pen/kptBs
 }
 
 [dir="rtl"] {
+
     .breadcrumbs li:not(:last-child) {
+
         &::after {
             transform: rotate(-45deg) translateY(-50%);
         }

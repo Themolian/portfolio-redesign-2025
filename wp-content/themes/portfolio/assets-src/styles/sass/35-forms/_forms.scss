@@ -8,6 +8,7 @@
 @use '../20-tools' as *;
 
 .amplify-form {
+
     /**
     The default styles for fieldset and legend are weird, so we effectively hide the fieldset
     If you want a border etc. wrap the fieldset in a div with the class `.fieldset-wrap`
@@ -42,6 +43,7 @@
 
 
     legend {
+
         @include text-22;
 
         font-weight: $emphasis;
@@ -79,6 +81,7 @@
 
 
     .field-hint {
+
         @include text-17;
 
         color: $neutral-70;
@@ -190,7 +193,7 @@
     [data-component="error-summary"] li a {
         color: $error-color;
         display: inline-block;
-        font-weight: bold;
+        font-weight: 700;
         padding-block: rem(10);
 
         &:hover,

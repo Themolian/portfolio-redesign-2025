@@ -39,6 +39,7 @@ html {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+
     html {
         interpolate-size: allow-keywords; /* 3 */
     }

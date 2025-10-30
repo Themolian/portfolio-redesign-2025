@@ -12,6 +12,7 @@
 @use '../20-tools' as *;
 
 .tag {
+
 	@include text-17;
 
 	background-color: $neutral-60;

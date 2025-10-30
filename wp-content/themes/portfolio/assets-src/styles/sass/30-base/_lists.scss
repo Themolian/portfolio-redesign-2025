@@ -56,7 +56,7 @@ dl {
     text-wrap: pretty; /* 1 */
 
 	dt {
-		font-weight: bold;
+		font-weight: 700;
 	}
 
 	dd + dt {
@@ -72,6 +72,7 @@ dl {
 
 // With a grid layout for a more tabulated feel
 dl.grid {
+
 	@supports (grid-row-start: auto) {
 		display: grid;
         gap: 1rem;

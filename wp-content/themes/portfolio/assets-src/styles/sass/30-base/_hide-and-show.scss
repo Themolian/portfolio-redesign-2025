@@ -69,6 +69,7 @@
  * focusable element to become visible when focused/active by a user.
  */
 .visuallyhidden:not(:focus, :active) {
+
 	@extend %visuallyhidden;
 }
 

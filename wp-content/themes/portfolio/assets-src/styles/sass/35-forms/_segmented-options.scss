@@ -10,6 +10,7 @@
 @use '../20-tools' as *;
 
 .amplify-form {
+
     .segmented-group-wrapper {
         max-inline-size: none;
     }
@@ -72,6 +73,7 @@
         }
 
         .segmented-label {
+
             @include stack(.5em);
 
             display: block;
@@ -83,12 +85,12 @@
             }
 
             span:first-of-type {
-                font-weight: bold;
+                font-weight: 700;
             }
         }
 
         .segmented-label__copy {
-            font-weight: normal;
+            font-weight: 400;
         }
 
         /* Input with hover */

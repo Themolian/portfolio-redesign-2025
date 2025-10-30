@@ -48,6 +48,7 @@ Responsive tables:
 
  */
 @media screen {
+
     [data-component="table-wrap"] {
         border: 1px solid $border-color;
         margin-block: rem(16);

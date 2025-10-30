@@ -12,6 +12,7 @@
 /* (Because the order reflects the DOM order, which Stylelint doesn't understand) */
 
 #js-click-nav-both {
+
     [data-trigger="sub-nav"] {
         padding-inline: rem(8);
     }

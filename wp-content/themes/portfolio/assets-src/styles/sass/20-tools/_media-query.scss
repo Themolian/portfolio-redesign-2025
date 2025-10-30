@@ -10,6 +10,7 @@
 	$query2: width,
 	$context: units.$browser-context
 ) {
+
 	@media screen and (#{$query1}-#{$query2}: math.div($point, $context) + em) {
 		@content;
 	}

@@ -17,6 +17,7 @@ amplify-table-sort th {
 }
 
 amplify-table-sort th[data-type="no-sort"] {
+
 	&:hover {
 		cursor: not-allowed;
 	}
@@ -28,6 +29,7 @@ amplify-table-sort th button svg {
 }
 
 amplify-table-sort [aria-sort="ascending"] button:focus > .arrow-wrapper {
+
 	.asc {
 		stroke-width: rem(50);
 	}
@@ -38,6 +40,7 @@ amplify-table-sort [aria-sort="ascending"] button:focus > .arrow-wrapper {
 }
 
 amplify-table-sort [aria-sort="descending"] button:focus > .arrow-wrapper {
+
 	.asc {
 		opacity: 0.3
 	}

@@ -1,5 +1,31 @@
 /*------------------------------------*\
     #Global header
 \*------------------------------------*/
-@use '../10-settings' as *;
-@use '../20-tools' as *;
+@use "../10-settings" as *;
+@use "../20-tools" as *;
+
+.site-head {
+	background-color: $jc-navy;
+	color: #fff;
+}
+
+.site-header {
+	padding-inline: rem(20);
+}
+
+.header-inner {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-inline: auto;
+	max-inline-size: rem($max-inline-size);
+	padding-top: rem(30);
+	width: 100%;
+
+	@include mq($bp-mobile) {
+		flex-direction: row;
+		justify-content: space-between;
+		padding-block: rem(30);
+	}
+}

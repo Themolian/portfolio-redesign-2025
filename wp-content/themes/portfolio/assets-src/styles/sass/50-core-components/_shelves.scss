@@ -11,6 +11,7 @@
 
 
 .component--shelves__intro {
+
 	@include stack(1rem);
 
 	margin-block-end: rem(30);
@@ -19,6 +20,7 @@
 
 
 .component--shelves__items {
+
 	@include mq($bp-tab-portrait) {
 		display: flex;
 		flex-wrap: wrap;
@@ -28,6 +30,7 @@
 
 
 .component--shelves__items > li {
+
 	@include mq($bp-tab-portrait) {
 		flex: 1 0 33%;
 		max-inline-size: 50%;

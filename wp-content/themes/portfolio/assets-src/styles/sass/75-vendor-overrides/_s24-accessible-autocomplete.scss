@@ -68,6 +68,7 @@
 .autocomplete__hint,
 .autocomplete__input,
 .autocomplete__option {
+
 	@include text-17;
 
 	line-height: 1.25;
@@ -82,9 +83,11 @@
 
 
 @media (width >= 641px) {
+
 	.autocomplete__hint,
 	.autocomplete__input,
 	.autocomplete__option {
+
 		@include text-17;
 
 		line-height: 1.25;
